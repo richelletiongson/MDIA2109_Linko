@@ -1,4 +1,4 @@
-.nextButton {
+.bigPinkButton {
     width: 100%;
     max-width: 200px;
     padding: 16px 24px;
@@ -15,9 +15,32 @@
     background-color:#FE4366;
   }
   
-  .nextButton:hover {
+  .bigPinkButton:hover {
     background-color:#6B1C2B;
   }
+
+  .bigPurpleButton {
+    background-color: #9B71F1; /* Purple color that matches the image */
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 19px;
+    padding: 14px 20px;
+    border-radius: 15px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 325px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+  }
+  
+  .bigPurpleButton:hover {
+    background-color: #8a57ff;
+  }
+
+
   
   .buttonContainer {
     display: inline-block;
