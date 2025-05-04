@@ -1,17 +1,24 @@
+import Image from "next/image";
+import styles from "./landingpage.module.css";
 
+export default function InitialPage() {
+  return (
+    <div className={styles.page}>
+      <main className={styles.main}>
+        <Image
+          className={styles.logomark}
+          src="/lgogs/linko_logomark.svg"
+          alt="Linko logomark"
+          width={268}
+          height={268}
+          priority
+        />
 
+      </main>
+    </div>
+  )
 
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
