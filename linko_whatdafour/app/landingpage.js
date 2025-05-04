@@ -1,5 +1,7 @@
+import React from 'react';
 import Image from "next/image";
 import styles from "./landingpage.module.css";
+import { BigPurpleButton } from './components/components';
 
 export default function InitialPage() {
   return (
@@ -12,6 +14,10 @@ export default function InitialPage() {
           width={268}
           height={268}
           priority
+        />
+        <BigPurpleButton
+          route="/.onboard/01_onboard.js"
+          buttonText="get started"
         />
 
       </main>
