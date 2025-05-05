@@ -7,7 +7,6 @@ html,
 body {
   max-width: 402px;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 body {
@@ -16,9 +15,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 .wrapper {
   margin: 0 auto;
-  width: 402px;
+  max-width: 402px;
   min-height: 874px;
 }
 
