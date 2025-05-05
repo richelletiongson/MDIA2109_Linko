@@ -5,7 +5,7 @@
 
 html, 
 body {
-  min-width: 402px;
+  max-width: 402px;
   overflow-x: hidden;
 }
 

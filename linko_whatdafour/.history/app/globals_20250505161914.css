@@ -5,8 +5,9 @@
 
 html, 
 body {
-  min-width: 402px;
+  width: 402px;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body {
