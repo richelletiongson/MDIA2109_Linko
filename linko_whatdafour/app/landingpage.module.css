@@ -1,7 +1,24 @@
 .page {
-  background-image: url(/background.svg);
+  width: 402px;
+  height: 874px;
+  overflow-x: hidden;
 }
 
+.main {
+  background-image: url(/background.svg);
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.logomark {
+  width: 408px;
+  height: 701px
+}
+
+.button {
+  justify-self: center;
+}
 
 
 

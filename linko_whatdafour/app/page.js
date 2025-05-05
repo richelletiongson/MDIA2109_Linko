@@ -1,5 +1,7 @@
+import React from 'react';
 import Image from "next/image";
 import styles from "./landingpage.module.css";
+import { BigPurpleButton } from './.components/components';
 
 export default function InitialPage() {
   return (
@@ -7,12 +9,18 @@ export default function InitialPage() {
       <main className={styles.main}>
         <Image
           className={styles.logomark}
-          src="/lgogs/linko_logomark.svg"
+          src="/logos/linko_logomark.svg"
           alt="Linko logomark"
           width={268}
           height={268}
           priority
         />
+        <div className={styles.button}>
+        <BigPurpleButton
+          route="onboard"
+          buttonText="get started"
+        />
+        </div>
 
       </main>
     </div>
