@@ -16,7 +16,6 @@
 .dark_purple {
   background-color: #0F0E21;
   color: #C2FF3E;
-  border: 1px solid #C2FF3E;;
 }
 
 .green {
@@ -33,7 +32,6 @@
 .transparent_pinkborder {
   background-color: rgba(0, 0, 0, 0);
   color: #FFFEFC;
-  border: 1px solid #FE4366;
 }
 
 .transparent_whitetxt {
@@ -44,6 +42,14 @@
 .transparent_greentxt {
   background-color: rgba(0, 0, 0, 0);
   color: #C2FF3E;
+}
+
+.pink_border {
+  border: 1px solid #FE4366;
+}
+
+.green_border {
+  border: 1px solid #C2FF3E;
 }
 
 .small_round {
