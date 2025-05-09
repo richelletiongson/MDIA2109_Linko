@@ -1,9 +1,10 @@
+
 import { useRouter } from 'next/navigation';
 import classnames from "classnames";
 import styles from './buttons.module.css';
 
 
-export const Button = ({buttonText, onClick, type, size}) => {
+export const Button = ({buttonText, onClickHandler, type, size}) => {
 
 
 
@@ -16,8 +17,7 @@ export const Button = ({buttonText, onClick, type, size}) => {
   return (
   
   <button
-  className={buttonClasses}
-  onClick={onClick}
+  onClick={onClickHandler}
   >
   
   {buttonText}
