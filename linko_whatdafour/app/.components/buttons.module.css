@@ -30,15 +30,20 @@
   color: #06060E;
 }
 
-.transparent-border {
+.transparent-pinkborder {
   background-color: rgba(0, 0, 0, 0);
   color: #FFFEFC;
   border: 1px solid #FE4366;
 }
 
-.transparent {
+.transparent-whitetxt {
   background-color: rgba(0, 0, 0, 0);
   color: #FFFEFC
+}
+
+.transparent-greentxt {
+  background-color: rgba(0, 0, 0, 0);
+  color: #C2FF3E;
 }
 
 .small-round {
