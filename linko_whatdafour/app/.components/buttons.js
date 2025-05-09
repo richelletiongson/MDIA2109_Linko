@@ -3,7 +3,7 @@ import classnames from "classnames";
 import styles from './buttons.module.css';
 
 
-export const Button = ({buttonText, onClick, type, size}) => {
+export const Button = ({buttonText, onClick, type, size, border}) => {
 
 
 
@@ -26,6 +26,8 @@ export const Button = ({buttonText, onClick, type, size}) => {
     [styles.transparent_pinkborder]: type === "transparent_pinkborder",
     [styles.transparent_whitetxt]: type === "transparent_whitetxt",
     [styles.transparent_greentxt]: type === "transparent_greentxt",
+    [styles.pink_border]: border === "pink_border",
+    [styles.green_border]: border === "green_border",
   });
   return (
   
