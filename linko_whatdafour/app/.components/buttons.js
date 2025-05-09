@@ -23,8 +23,9 @@ export const Button = ({buttonText, onClick, type, size}) => {
     [styles.dark-purple]: type === "dark-purple",
     [styles.green]: type === "green",
     [styles.white]: type === "white",
-    [styles.transparent-border]: type === "transparent-border",
-    [styles.transparent]: type === "transparent",
+    [styles.transparent-pinkborder]: type === "transparent-pinkborder",
+    [styles.transparent-whitetxt]: type === "transparent-whitetxt",
+    [styles.transparent-greentxt]: type === "transparent-greentxt",
   });
   return (
   
