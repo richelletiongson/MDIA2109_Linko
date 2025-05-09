@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import Image from "next/image";
 import styles from "./landingpage.module.css";
@@ -6,8 +5,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from './.components/buttons';
 
 export default function InitialPage() {
-  const router = useRouter();
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -21,10 +18,11 @@ export default function InitialPage() {
         />
         <div className={styles.button}>
         <Button
-          buttonText="GET STARTED"
-          onClick={()=>router.push("/onboard")}
           type="purple"
           size="big"
+          buttonText="GET STARTED"
+          onClick={()=>router.push("/landingpage.js")}
+
         />
         </div>
 

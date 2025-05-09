@@ -22,9 +22,10 @@ export default function InitialPage() {
         <div className={styles.button}>
         <Button
           buttonText="GET STARTED"
-          onClick={()=>router.push("/onboard")}
+          onClick={()=>router.push("/landingpage.js")}
           type="purple"
           size="big"
+
         />
         </div>
 
