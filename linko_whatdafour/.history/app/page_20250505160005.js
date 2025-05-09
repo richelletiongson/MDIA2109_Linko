@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import styles from "./landingpage.module.css";
-import { BigPurpleButton } from './.components/buttons';
+import { BigPurpleButton } from './.components/components';
 
 export default function InitialPage() {
   return (
