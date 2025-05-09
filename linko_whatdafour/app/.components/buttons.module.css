@@ -8,12 +8,12 @@
   color: white;
 }
 
-.light-purple {
+.light_purple {
   background-color: #E0C3FE;
   color: #06060E; 
 }
 
-.dark-purple {
+.dark_purple {
   background-color: #0F0E21;
   color: #C2FF3E;
   border: 1px solid #C2FF3E;;
@@ -30,23 +30,23 @@
   color: #06060E;
 }
 
-.transparent-pinkborder {
+.transparent_pinkborder {
   background-color: rgba(0, 0, 0, 0);
   color: #FFFEFC;
   border: 1px solid #FE4366;
 }
 
-.transparent-whitetxt {
+.transparent_whitetxt {
   background-color: rgba(0, 0, 0, 0);
   color: #FFFEFC
 }
 
-.transparent-greentxt {
+.transparent_greentxt {
   background-color: rgba(0, 0, 0, 0);
   color: #C2FF3E;
 }
 
-.small-round {
+.small_round {
   display: flex;
   border-radius: 50%;
   width: 40px;
@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-.big-round {
+.big_round {
   display: flex;
   border-radius: 50%;
   width: 50px;
@@ -117,7 +117,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.big-pill {
+.big_pill {
   display: inline-block;
   padding: 10px 20px;
   border: none;
@@ -133,7 +133,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.small-pill {
+.small_pill {
   display: inline-block;
   padding: 10px 20px;
   border: none;
