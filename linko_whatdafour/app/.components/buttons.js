@@ -8,10 +8,23 @@ export const Button = ({buttonText, onClick, type, size}) => {
 
 
   const buttonClasses = classnames(styles.button, {
-    [styles.small]: size === "small",
     [styles.big]: size === "big",
-    [styles.purple]: type === "purple",
+    [styles.medium]: size === "medium",
+    [styles.small]: size === "small",
+    [styles.smaller]: size === "smaller",
+    [styles.big-round]: size === "big-round",
+    [styles.small-round]: size === "small-round",
+    [styles.big-pill]: size === "big-pill",
+    [styles.small-pill]: size === "small-pill",
+    [styles.long]: size === "long",
     [styles.pink]: type === "pink",
+    [styles.purple]: type === "purple",
+    [styles.light-purple]: type === "light-purple",
+    [styles.dark-purple]: type === "dark-purple",
+    [styles.green]: type === "green",
+    [styles.white]: type === "white",
+    [styles.transparent-border]: type === "transparent-border",
+    [styles.transparent]: type === "transparent",
   });
   return (
   
