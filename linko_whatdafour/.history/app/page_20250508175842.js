@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import styles from "./landingpage.module.css";
-import { BigPurpleButton, Button } from './.components/buttons';
+import { BigPurpleButton } from './.components/buttons';
 
 export default function InitialPage() {
   return (
@@ -16,7 +16,7 @@ export default function InitialPage() {
           priority
         />
         <div className={styles.button}>
-        <Button
+        <BigPurpleButton
           route="onboard"
           buttonText="get started"
         />
