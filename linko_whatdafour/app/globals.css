@@ -7,18 +7,23 @@ html,
 body {
   min-width: 402px;
   overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper {
-  margin: 0 auto;
   width: 402px;
   min-height: 874px;
+  background: var(--background);
 }
 
 
