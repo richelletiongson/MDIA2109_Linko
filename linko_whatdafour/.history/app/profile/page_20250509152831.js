@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from '../.components/buttons';
 
 
-
 export default function ProfilePage() {
   const router = useRouter();
   return (
@@ -62,8 +61,8 @@ export default function ProfilePage() {
           <div className={styles.location}>Vancouver, BC</div>
         </div>
         <section className={styles.section}> 
-          <h3 className={styles.sectionTitle}>Note</h3>     
-          <div className={styles.noteBox}/*PLACEHOLDER FOR CONTAINER*/>                                  
+          <h3 className={styles.sectionTitle}>Note</h3>     /*PLACEHOLDER FOR CONTAINER*/
+          <div className={styles.noteBox}>                                  
           "I'm going to BlackPink on 22th at 6pm with my sister!"
           </div> 
           <Button 
@@ -74,25 +73,27 @@ export default function ProfilePage() {
             border="green_border"
           />
         </section>
-        <section className={styles.section}>
-          <h3 className={styles.sectionTitle}>Highlights</h3>
-          <div className={styles.tagsRow}>
-            <span className={`${styles.tag} ${styles.highlight}`}>She/her</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>English</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>ESTP</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>Night owl</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>Going with the flow</span>
-          </div>
-          <Button 
-            buttonText="Edit" 
-            onClick={()=>router.push("/profile/settings")}                  /*PLACEHOLDER FOR MODAL*/
-            type="dark_purple" 
-            size="long" 
-            border="green_border"
-          />
-        </section>
-     
-      
+  
+      <section className={styles.section}>
+        <h3 className={styles.sectionTitle}>Note</h3>
+        <div className={styles.noteBox}>
+          "I'm going to BlackPink on 22th at 6pm with my sister!"
+        </div>
+        <Button buttonText="Edit" type="white" size="small" />
+      </section>
+
+      {/* Highlights Section */}
+      <section className={styles.section}>
+        <h3 className={styles.sectionTitle}>Highlights</h3>
+        <div className={styles.tagsRow}>
+          <span className={`${styles.tag} ${styles.highlight}`}>She/her</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>English</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>ESTP</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>Night owl</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>Going with the flow</span>
+        </div>
+        <Button buttonText="Edit" type="white" size="small" />
+      </section>
 
       {/* Bio Section */}
       <section className={styles.section}>

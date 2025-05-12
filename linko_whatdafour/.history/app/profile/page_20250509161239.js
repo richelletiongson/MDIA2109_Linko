@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from '../.components/buttons';
 
 
-
 export default function ProfilePage() {
   const router = useRouter();
   return (
@@ -92,7 +91,19 @@ export default function ProfilePage() {
           />
         </section>
      
-      
+
+      {/* Highlights Section */}
+      <section className={styles.section}>
+        <h3 className={styles.sectionTitle}>Highlights</h3>
+        <div className={styles.tagsRow}>
+          <span className={`${styles.tag} ${styles.highlight}`}>She/her</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>English</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>ESTP</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>Night owl</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>Going with the flow</span>
+        </div>
+        <Button buttonText="Edit" type="white" size="small" />
+      </section>
 
       {/* Bio Section */}
       <section className={styles.section}>

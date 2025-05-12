@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './profile.module.css';
 import { useRouter } from 'next/navigation';
 import { Button } from '../.components/buttons';
-
+import Modal from '../.components/Modal'
 
 
 export default function ProfilePage() {
@@ -51,7 +51,7 @@ export default function ProfilePage() {
               <path id="Vector_2" d="M35 15.7499L40.25 20.9999M42.6737 18.5237C43.363 17.8345 43.7502 16.8997 43.7502 15.9249C43.7502 14.9502 43.363 14.0154 42.6737 13.3262C41.9845 12.637 41.0497 12.2498 40.075 12.2498C39.1003 12.2498 38.1655 12.637 37.4763 13.3262L22.75 27.9999V33.2499H28L42.6737 18.5237Z" stroke="#C2FF3E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
               </g>
               </svg>}
-            onClick={()=>router.push("/profile/settings")}                    /*PLACEHOLDER FOR MODAL*/
+            onClick={()=>setIsModalOpen(true)}                    /*PLACEHOLDER FOR MODAL*/
             type="dark_purple"
             size="big_round"
           />
