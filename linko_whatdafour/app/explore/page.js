@@ -1,4 +1,4 @@
-import InputField from "../components/input_field/input_field"
+import InputField from "../.components/input_field/input_field"
 import styles from "./explore.module.css"
 import classNames from "classnames";
 

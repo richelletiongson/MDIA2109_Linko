@@ -1,4 +1,4 @@
-import InputField from "../components/input_field/input_field"
+import InputField from "../.components/input_field/input_field"
 import classNames from "classnames";
 
 export default function ExplorePage() {
