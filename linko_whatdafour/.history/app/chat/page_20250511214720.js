@@ -28,19 +28,19 @@ export default function Page() {
             )}
 
             {showModal && (
-                <GetStartedModal
-                    isOpen={true}
-                    size='small'
-                    footer={
-                        <Button
-                            type='pink'
-                            size='small_round'
-                            buttonText='>'
-                        />
-                    }>
-                    Cool! Let's move on to the next step
-                    <br />
-                    and get to know you better
+                <GetStartedModal isOpen={true}>
+                    <>
+                        Cool! Let's move on to the next step
+                        <br />
+                        and get to know you better
+                        <div style={{ marginTop: "1.5rem" }}>
+                            <Button
+                                type='pink'
+                                size='small_round'
+                                buttonText='>'
+                            />
+                        </div>
+                    </>
                 </GetStartedModal>
             )}
         </main>

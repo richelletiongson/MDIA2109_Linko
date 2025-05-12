@@ -103,16 +103,3 @@
     justify-content: center;
     z-index: 1000;
 }
-
-.getStartedModal.small {
-    width: 18rem;
-    height: 8rem;
-}
-.getStartedModal.medium {
-    width: 25.125rem;
-    height: 11.3125rem;
-}
-.getStartedModal.large {
-    width: 32rem;
-    height: 16rem;
-}

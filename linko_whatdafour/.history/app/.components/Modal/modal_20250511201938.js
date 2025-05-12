@@ -23,29 +23,3 @@ export const WarningMessage = ({
         </div>
     );
 };
-
-export const GetStartedModal = ({
-    isOpen = true,
-    children,
-    size = "medium",
-    onClose = null,
-    footer = null,
-}) => {
-    if (!isOpen) return null;
-
-    const modalClasses = classnames(styles.getStartedModal, {
-        [styles.small]: size === "small",
-        [styles.medium]: size === "medium",
-        [styles.large]: size === "large",
-    });
-
-    return (
-        <div className={styles.overlay}>
-            <div className={modalClasses}>
-                <div className={styles.topBar}></div>
-                <div className={styles.content}>{children}</div>
-                <div className={styles.footer}>{footer}</div>
-            </div>
-        </div>
-    );
-};

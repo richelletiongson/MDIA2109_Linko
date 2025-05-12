@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { WarningMessage, GetStartedModal } from "../.components/Modal/modal";
-import { Button } from "../.components/buttons";
+import { Button } from "../.components/Button";
 
 export default function Page() {
     const [showWarning, setShowWarning] = useState(false);
@@ -15,8 +15,6 @@ export default function Page() {
                 Toggle Warning
             </button>
 
-            <button onClick={() => setShowModal(true)}>Show Modal</button>
-
             {showWarning && (
                 <div style={{ marginTop: "2rem" }}>
                     <WarningMessage
@@ -28,19 +26,19 @@ export default function Page() {
             )}
 
             {showModal && (
-                <GetStartedModal
-                    isOpen={true}
-                    size='small'
-                    footer={
-                        <Button
-                            type='pink'
-                            size='small_round'
-                            buttonText='>'
-                        />
-                    }>
-                    Cool! Let's move on to the next step
-                    <br />
-                    and get to know you better
+                <GetStartedModal isOpen={true}>
+                    <>
+                        Cool! Let's move on to the next step
+                        <br />
+                        and get to know you better
+                        <div style={{ marginTop: "1.5rem" }}>
+                            <Button
+                                type='pink'
+                                size='small_round'
+                                buttonText='>'
+                            />
+                        </div>
+                    </>
                 </GetStartedModal>
             )}
         </main>

@@ -30,7 +30,6 @@ export default function Page() {
             {showModal && (
                 <GetStartedModal
                     isOpen={true}
-                    size='small'
                     footer={
                         <Button
                             type='pink'
