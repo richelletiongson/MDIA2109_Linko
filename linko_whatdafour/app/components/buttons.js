@@ -1,12 +1,11 @@
 'use client';
-import { useRouter } from 'next/navigation';
-import classnames from "classnames";
-import styles from './buttons.module.css';
 
+import styles from './buttons.module.css';
+import classNames from "classnames";
 
 export const Button = ({buttonText, onClick, type, size}) => {
 
-
+function onClickHandler() {}
 
   const buttonClasses = classNames(styles.button, {
     [styles.small]: size === "small",

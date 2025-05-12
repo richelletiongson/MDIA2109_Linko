@@ -1,0 +1,9 @@
+.container {
+  margin-top: 200px;
+}
+
+.input_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
