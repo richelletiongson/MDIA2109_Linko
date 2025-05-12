@@ -97,14 +97,14 @@ const TagsModal = ({
                 //onClick={closeModal}
                 buttonText="Cancel"
                 type="pink"
-                size="smaller"
+                size="big"
               />
               
               <Button 
                 onClick={saveChanges}
                 buttonText="Done"
                 type="pink"
-                size="smaller"
+                size="big"
               />
             </div>
           </div>

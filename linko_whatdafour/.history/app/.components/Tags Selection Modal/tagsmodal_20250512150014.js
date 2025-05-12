@@ -94,17 +94,17 @@ const TagsModal = ({
             
             <div className={styles.modalActions}>
               <Button 
-                //onClick={closeModal}
+                // onClick={closeModal}
                 buttonText="Cancel"
                 type="pink"
-                size="smaller"
+                size="big"
               />
               
               <Button 
                 onClick={saveChanges}
                 buttonText="Done"
                 type="pink"
-                size="smaller"
+                size="big"
               />
             </div>
           </div>
