@@ -29,7 +29,6 @@ export const GetStartedModal = ({
     children,
     size = "medium",
     onClose = null,
-    footer = null,
 }) => {
     if (!isOpen) return null;
 
@@ -44,7 +43,9 @@ export const GetStartedModal = ({
             <div className={modalClasses}>
                 <div className={styles.topBar}></div>
                 <div className={styles.content}>{children}</div>
-                <div className={styles.footer}>{footer}</div>
+                <div className={styles.footer}>
+                    {/* Put your <Button /> component here */}
+                </div>
             </div>
         </div>
     );
