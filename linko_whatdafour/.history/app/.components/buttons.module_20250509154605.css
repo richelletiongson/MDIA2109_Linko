@@ -158,9 +158,6 @@
 }
 
 .long {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-weight: 700px;
   font-size: 16px;
   padding: 14px 20px;

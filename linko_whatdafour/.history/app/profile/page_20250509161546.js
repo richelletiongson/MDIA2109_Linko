@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from '../.components/buttons';
 
 
-
 export default function ProfilePage() {
   const router = useRouter();
   return (

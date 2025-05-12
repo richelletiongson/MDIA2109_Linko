@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { Button } from '../.components/buttons';
 
 
-
 export default function ProfilePage() {
   const router = useRouter();
   return (
@@ -41,58 +40,40 @@ export default function ProfilePage() {
           </div>
         </div>
         <div className={styles.profilePicWrapper}>
-          <Image src="/photos/profile_picture.jpg" alt="Profile picture" width={419} height={314} className={styles.profilePic} />
-          <div className={styles.editPictureButton}>
-          <Button
-            buttonText={<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="Group">
-              <circle id="Ellipse 74" cx="27.125" cy="27.125" r="27.125" fill="#0B0A17"/>
-              <path id="Vector" d="M19.25 19.25H17.5C16.5717 19.25 15.6815 19.6187 15.0251 20.2751C14.3687 20.9315 14 21.8217 14 22.75V38.5C14 39.4283 14.3687 40.3185 15.0251 40.9749C15.6815 41.6313 16.5717 42 17.5 42H33.25C34.1783 42 35.0685 41.6313 35.7249 40.9749C36.3813 40.3185 36.75 39.4283 36.75 38.5V36.75" stroke="#C2FF3E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path id="Vector_2" d="M35 15.7499L40.25 20.9999M42.6737 18.5237C43.363 17.8345 43.7502 16.8997 43.7502 15.9249C43.7502 14.9502 43.363 14.0154 42.6737 13.3262C41.9845 12.637 41.0497 12.2498 40.075 12.2498C39.1003 12.2498 38.1655 12.637 37.4763 13.3262L22.75 27.9999V33.2499H28L42.6737 18.5237Z" stroke="#C2FF3E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              </svg>}
-            onClick={()=>router.push("/profile/settings")}                    /*PLACEHOLDER FOR MODAL*/
-            type="dark_purple"
-            size="big_round"
-          />
-          </div>
+          <Image src="/photos/profile_picture.jpg" alt="Profile picture" width={1000} height={800} className={styles.profilePic} />
+          <button className={styles.editPicBtn} aria-label="Edit profile picture">
+            <span role="img" aria-label="edit">✏️</span>
+          </button>
         </div>
+
+
         <div className={styles.profileInfo}>
           <h2 className={styles.name}>Richelle <span className={styles.age}>21</span></h2>
           <div className={styles.location}>Vancouver, BC</div>
         </div>
-        <section className={styles.section}> 
-          <h3 className={styles.sectionTitle}>Note</h3>     
-          <div className={styles.noteBox}/*PLACEHOLDER FOR CONTAINER*/>                                  
+    
+
+      {/* Note Section */}
+      <section className={styles.section}>
+        <h3 className={styles.sectionTitle}>Note</h3>
+        <div className={styles.noteBox}>
           "I'm going to BlackPink on 22th at 6pm with my sister!"
-          </div> 
-          <Button 
-            buttonText="Edit" 
-            onClick={()=>router.push("/profile/settings")}                  /*PLACEHOLDER FOR MODAL*/
-            type="dark_purple" 
-            size="long" 
-            border="green_border"
-          />
-        </section>
-        <section className={styles.section}>
-          <h3 className={styles.sectionTitle}>Highlights</h3>
-          <div className={styles.tagsRow}>
-            <span className={`${styles.tag} ${styles.highlight}`}>She/her</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>English</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>ESTP</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>Night owl</span>
-            <span className={`${styles.tag} ${styles.highlight}`}>Going with the flow</span>
-          </div>
-          <Button 
-            buttonText="Edit" 
-            onClick={()=>router.push("/profile/settings")}                  /*PLACEHOLDER FOR MODAL*/
-            type="dark_purple" 
-            size="long" 
-            border="green_border"
-          />
-        </section>
-     
-      
+        </div>
+        <Button buttonText="Edit" type="white" size="small" />
+      </section>
+
+      {/* Highlights Section */}
+      <section className={styles.section}>
+        <h3 className={styles.sectionTitle}>Highlights</h3>
+        <div className={styles.tagsRow}>
+          <span className={`${styles.tag} ${styles.highlight}`}>She/her</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>English</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>ESTP</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>Night owl</span>
+          <span className={`${styles.tag} ${styles.highlight}`}>Going with the flow</span>
+        </div>
+        <Button buttonText="Edit" type="white" size="small" />
+      </section>
 
       {/* Bio Section */}
       <section className={styles.section}>

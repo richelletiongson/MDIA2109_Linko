@@ -71,15 +71,18 @@
 
 /* Section */
 .section {
-  padding: 0px 45px 10px 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 45px;
+  padding-left: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .sectionTitle {
-  color: #fff;
-  font-size: 23px;
-  font-weight: 700;
+  color: #C2FF3E;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 /*PLACEHOLDER FOR CONTAINER*/
@@ -87,13 +90,13 @@
   display: flex;
   align-items: center;                  
   background: #06060E;
-  border: 1px solid #C2FF3E;
+  border: 2px solid #C2FF3E;
   border-radius: 15px;
   min-height: 85px;
   width: 100%;
   padding: 10px 12px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .bioBox {
   background: #2B2750;

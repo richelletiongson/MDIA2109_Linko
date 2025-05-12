@@ -71,7 +71,7 @@
 
 /* Section */
 .section {
-  padding: 0px 45px 10px 16px;
+  padding: 100px 45px 10px 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -93,7 +93,7 @@
   width: 100%;
   padding: 10px 12px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .bioBox {
   background: #2B2750;
