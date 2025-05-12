@@ -1,0 +1,99 @@
+.container {
+    border-radius: 15px; 
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Color */
+
+  .black {
+    background-color:  #000000;
+  }
+
+  .darkPurple {
+    background-color:  #0F0E21;
+  }
+
+    /* Border */
+
+  .border {
+    border: 1px solid #C2FF3E;
+  }
+
+  /* Size */
+
+  .small {
+    width: 356px;
+    height: 80px;
+    border-radius: 8px;
+  }
+  
+  .medium {
+    width: 374px;
+    height: 133px;
+    border-radius: 8px;
+  }
+  
+  .large {
+    width: 328px;
+    height: 702px;
+    border-radius: 8px;
+  }
+
+  .channelSize {
+    width: 177px;
+    height: 177px;
+    border-radius: 8px;
+  }
+
+  /* Text */
+
+  .Regular {
+    font-size: 16px;
+    font-weight: Regular;
+    font-family: Lexend;
+  }
+
+  .Bold {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Lexend;
+  }
+
+  .ExtraBold_Channel {
+    font-size: 16px;
+    font-weight: ExtraBold;
+    font-family: Lexend;
+  }
+
+  .Regular_Channel {
+    font-size: 10px;
+    font-weight: Regular;
+    font-family: Lexend;
+  }
+
+  .ExtraLight_Channel {
+    font-size: 7.6px;
+    font-weight: ExtraLight;
+    font-family: Lexend;
+  }
+
+  .Bold_CommunityRules {
+    font-size: 19px;
+    font-weight: Bold;
+    font-family: Lexend;
+  }
+
+  .Regular_CommunityRules {
+    font-size: 13px;
+    font-weight: Regular;
+    font-family: Lexend;
+  }
+
+
+
+
+ 
