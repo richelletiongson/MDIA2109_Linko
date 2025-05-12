@@ -196,16 +196,14 @@ export default function ProfilePage() {
         <button className={styles.navBtn}><span role="img" aria-label="Explore">🔍</span><div>Explore</div></button>
         <button className={styles.navBtn}><span role="img" aria-label="Profile">👤</span><div>Profile</div></button>
       </nav>
-     
-     
-     
-     {modalOpen && <TagsModal
+      <TagsModal
+        isOpen={modalOpen}
         tags={highlightTags}
         onToggleTag={() => handleToggleTag()}
         onCancel={() => closeModal()}
         onDone={() => handleDone()}
         title="Choose what you want visible on your profile!"
-      />}
+      />
     </div>
   );
 }

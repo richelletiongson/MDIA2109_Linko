@@ -23,7 +23,7 @@ export default function ProfilePage() {
   // const [modalTags, setModalTags] = useState(highlightTags);
 
   const openModal = () => {
-    // setModalTags(highlightTags);
+    setModalTags(highlightTags);
     setModalOpen(true);
   };
 
@@ -39,7 +39,7 @@ export default function ProfilePage() {
     );
   };
   const handleDone = () => {
-    // setHighlightTags(modalTags);
+    setHighlightTags(modalTags);
     setModalOpen(false);
   };
 
@@ -196,16 +196,14 @@ export default function ProfilePage() {
         <button className={styles.navBtn}><span role="img" aria-label="Explore">🔍</span><div>Explore</div></button>
         <button className={styles.navBtn}><span role="img" aria-label="Profile">👤</span><div>Profile</div></button>
       </nav>
-     
-     
-     
-     {modalOpen && <TagsModal
-        tags={highlightTags}
+      <TagsModal
+        isOpen={modalOpen}
+        tags={modalTags}
         onToggleTag={() => handleToggleTag()}
         onCancel={() => closeModal()}
         onDone={() => handleDone()}
         title="Choose what you want visible on your profile!"
-      />}
+      />
     </div>
   );
 }

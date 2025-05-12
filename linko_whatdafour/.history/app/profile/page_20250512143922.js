@@ -200,6 +200,7 @@ export default function ProfilePage() {
      
      
      {modalOpen && <TagsModal
+        isOpen={modalOpen}
         tags={highlightTags}
         onToggleTag={() => handleToggleTag()}
         onCancel={() => closeModal()}

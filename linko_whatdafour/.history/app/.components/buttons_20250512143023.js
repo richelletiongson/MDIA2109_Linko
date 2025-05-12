@@ -3,7 +3,7 @@ import classnames from "classnames";
 import styles from './buttons.module.css';
 
 
-export default function Button({buttonText, onClick, type, size, border}){
+export default const Button = ({buttonText, onClick, type, size, border}) => {
 
 
 
