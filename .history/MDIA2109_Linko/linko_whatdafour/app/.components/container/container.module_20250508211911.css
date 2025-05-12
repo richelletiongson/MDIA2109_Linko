@@ -1,0 +1,20 @@
+.container {
+    border-radius: 15px; 
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .black {
+    background-color:  #000000;
+    color: white;
+  }
+
+  .darkPurple {
+    background-color:  #0F0E21;
+    color: white;
+  }
+
+ 
