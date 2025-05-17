@@ -22,13 +22,13 @@ export default function TagsModal({ tags, onToggleTag, onCancel, onDone, title }
             onClick={onCancel} 
             buttonText="Cancel" 
             type="pink" 
-            size="smaller" 
+            size="small" 
           />
           <Button 
             onClick={onDone} 
             buttonText="Done" 
             type="pink" 
-            size="smaller" 
+            size="small" 
           />
         </div>
       </div>

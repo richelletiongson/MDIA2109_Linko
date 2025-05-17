@@ -80,5 +80,4 @@
 .modalActions {
   display: flex;
   justify-content: space-around;
-  gap: 150px;
 }

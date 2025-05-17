@@ -12,7 +12,7 @@ export default function TagsModal({ tags, onToggleTag, onCancel, onDone, title }
               key={tag.id}
               buttonText={tag.text}
               type={tag.active ? (idx % 2 === 0 ? 'green' : 'light_purple') : 'white'}
-              size="small_pill"
+              size="big"
               onClick={() => onToggleTag(idx)}
             />
           ))}
@@ -22,13 +22,13 @@ export default function TagsModal({ tags, onToggleTag, onCancel, onDone, title }
             onClick={onCancel} 
             buttonText="Cancel" 
             type="pink" 
-            size="smaller" 
+            size="small" 
           />
           <Button 
             onClick={onDone} 
             buttonText="Done" 
             type="pink" 
-            size="smaller" 
+            size="small" 
           />
         </div>
       </div>
