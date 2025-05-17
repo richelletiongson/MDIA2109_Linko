@@ -14,9 +14,8 @@ export default function ProfilePage() {
     { id: 1, text: 'She/her', active: true },
     { id: 2, text: 'English', active: true },
     { id: 3, text: 'ESTP', active: true },
-    { id: 4, text: 'Casual listener', active: true },
-    { id: 5, text: 'Night owl', active: true },
-    { id: 6, text: 'Going with the flow', active: true },
+    { id: 4, text: 'Night owl', active: true },
+    { id: 5, text: 'Going with the flow', active: true },
   ];
 
   const [highlightTags, setHighlightTags] = useState(initialHighlightTags);

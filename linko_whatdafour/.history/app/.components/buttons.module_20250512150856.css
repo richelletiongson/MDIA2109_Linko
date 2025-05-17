@@ -143,11 +143,12 @@
 
 .small_pill {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 10px 20px;
   border: none;
   border-radius: 20px;
   font-size: 13px;
   text-align: center;
+  min-width: 100px; /* Optional: sets a minimum width */
   max-width: 100%; 
   width: auto; 
   white-space: normal;

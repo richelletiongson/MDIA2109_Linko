@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './profile.module.css';
 import { useRouter } from 'next/navigation';
-import Button from "@/app/.components/buttons";
+import { Button } from '../.components/buttons';
 import TagsModal from '../.components/Tags Selection Modal/tagsmodal';
 
 
@@ -11,12 +11,11 @@ export default function ProfilePage() {
   const router = useRouter();
 
   const initialHighlightTags = [
-    { id: 1, text: 'She/her', active: true },
-    { id: 2, text: 'English', active: true },
-    { id: 3, text: 'ESTP', active: true },
-    { id: 4, text: 'Casual listener', active: true },
-    { id: 5, text: 'Night owl', active: true },
-    { id: 6, text: 'Going with the flow', active: true },
+    { label: 'She/her', selected: true },
+    { label: 'English', selected: true },
+    { label: 'ESTP', selected: true },
+    { label: 'Night owl', selected: true },
+    { label: 'Going with the flow', selected: true },
   ];
 
   const [highlightTags, setHighlightTags] = useState(initialHighlightTags);
@@ -27,13 +26,11 @@ export default function ProfilePage() {
     setModalTags(highlightTags);
     setModalOpen(true);
   };
-
   const closeModal = () => setModalOpen(false);
-
   const handleToggleTag = idx => {
     setModalTags(tags =>
       tags.map((tag, i) =>
-        i === idx ? { ...tag, active: !tag.active } : tag
+        i === idx ? { ...tag, selected: !tag.selected } : tag
       )
     );
   };
@@ -66,7 +63,7 @@ export default function ProfilePage() {
               <g id="Group">
               <circle id="Ellipse 74" cx="27.125" cy="27.125" r="27.125" fill="#0B0A17"/>
               <path id="Vector" d="M19.25 19.25H17.5C16.5717 19.25 15.6815 19.6187 15.0251 20.2751C14.3687 20.9315 14 21.8217 14 22.75V38.5C14 39.4283 14.3687 40.3185 15.0251 40.9749C15.6815 41.6313 16.5717 42 17.5 42H33.25C34.1783 42 35.0685 41.6313 35.7249 40.9749C36.3813 40.3185 36.75 39.4283 36.75 38.5V36.75" stroke="#C2FF3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path id="Vector_2" d="M35 15.7499L40.25 20.9999M42.6737 18.5237C43.363 17.8345 43.7502 16.8997 43.7502 15.9249C43.7502 14.9502 43.363 14.0154 42.6737 13.3262C41.9845 12.637 41.0497 12.2498 40.075 12.2498C39.1003 12.2498 38.1655 12.637 37.4763 13.3262L22.75 27.9999V33.2499H28L42.6737 18.5237Z" stroke="#C2FF3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path id="Vector_2" d="M35 15.7499L40.25 20.9999M42.6737 18.5237C43.363 17.8345 43.7502 16.8997 43.7502 15.9249C43.7502 14.9502 43.363 14.0154 42.6737 13.3262C41.9845 12.637 41.0497 12.2498 40.075 12.2498C39.1003 12.2498 38.1655 12.637 37.4763 13.3262L22.75 27.9999V33.2499H28L42.6737 18.5237Z" stroke="#C2FF3E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
               </g>
               </svg>}
             onClick={()=>router.push("/profile/settings")}                    /*PLACEHOLDER FOR MODAL*/
@@ -95,21 +92,21 @@ export default function ProfilePage() {
         <section className={styles.section}>
           <h3 className={styles.sectionTitle}>Highlights</h3>
           <div className={styles.tagsRow}>
-            {highlightTags.filter(tag => tag.active).map((tag, idx) => (
+            {highlightTags.filter(tag => tag.selected).map(tag => (
               <Button
-                key={tag.id}
-                buttonText={tag.text}
-                type={idx % 2 === 0 ? 'green' : 'light_purple'}
-                size="small_pill"
+                key={tag.label}
+                buttonText={tag.label}
+                type="green"
+                size="big_pill"
                 onClick={() => {}}
+                // not clickable in profile view
               />
             ))}
           </div>
           <Button 
             buttonText="Edit" 
-            type="dark_purple" 
-            size="long" 
-            border="green_border" 
+            type="transparent_greentxt" 
+            size="long" border="green_border" 
             onClick={openModal} 
           />
         </section>
@@ -195,18 +192,14 @@ export default function ProfilePage() {
         <button className={styles.navBtn}><span role="img" aria-label="Explore">🔍</span><div>Explore</div></button>
         <button className={styles.navBtn}><span role="img" aria-label="Profile">👤</span><div>Profile</div></button>
       </nav>
-     
-     
-     
-     {modalOpen && (
-       <TagsModal
-         tags={modalTags}
-         onToggleTag={handleToggleTag}
-         onCancel={closeModal}
-         onDone={handleDone}
-         title="Choose what you want visible on your profile!"
-       />
-     )}
+      <TagsModal
+        isOpen={modalOpen}
+        tags={modalTags}
+        onToggleTag={handleToggleTag}
+        onCancel={closeModal}
+        onDone={handleDone}
+        title="Choose what you want visible on your profile!"
+      />
     </div>
   );
 }

@@ -11,34 +11,35 @@ export default function ProfilePage() {
   const router = useRouter();
 
   const initialHighlightTags = [
-    { id: 1, text: 'She/her', active: true },
-    { id: 2, text: 'English', active: true },
-    { id: 3, text: 'ESTP', active: true },
-    { id: 4, text: 'Casual listener', active: true },
-    { id: 5, text: 'Night owl', active: true },
-    { id: 6, text: 'Going with the flow', active: true },
+    { label: 'She/her', selected: true },
+    { label: 'English', selected: true },
+    { label: 'ESTP', selected: true },
+    { label: 'Night owl', selected: true },
+    { label: 'Going with the flow', selected: true },
   ];
 
   const [highlightTags, setHighlightTags] = useState(initialHighlightTags);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalTags, setModalTags] = useState(highlightTags);
+  // const [modalTags, setModalTags] = useState(highlightTags);
 
   const openModal = () => {
-    setModalTags(highlightTags);
+    // setModalTags(highlightTags);
     setModalOpen(true);
   };
 
   const closeModal = () => setModalOpen(false);
 
+
+
   const handleToggleTag = idx => {
     setModalTags(tags =>
       tags.map((tag, i) =>
-        i === idx ? { ...tag, active: !tag.active } : tag
+        i === idx ? { ...tag, selected: !tag.selected } : tag
       )
     );
   };
   const handleDone = () => {
-    setHighlightTags(modalTags);
+    // setHighlightTags(modalTags);
     setModalOpen(false);
   };
 
@@ -95,22 +96,22 @@ export default function ProfilePage() {
         <section className={styles.section}>
           <h3 className={styles.sectionTitle}>Highlights</h3>
           <div className={styles.tagsRow}>
-            {highlightTags.filter(tag => tag.active).map((tag, idx) => (
+            {highlightTags.filter(tag => tag.selected).map(tag => (
               <Button
-                key={tag.id}
-                buttonText={tag.text}
-                type={idx % 2 === 0 ? 'green' : 'light_purple'}
-                size="small_pill"
+                key={tag.label}
+                buttonText={tag.label}
+                type="green"
+                size="big_pill"
                 onClick={() => {}}
+                // not clickable in profile view
               />
             ))}
           </div>
           <Button 
             buttonText="Edit" 
-            type="dark_purple" 
-            size="long" 
-            border="green_border" 
-            onClick={openModal} 
+            type="transparent_greentxt" 
+            size="long" border="green_border" 
+            onClick={() => openModal()} 
           />
         </section>
      
@@ -198,15 +199,14 @@ export default function ProfilePage() {
      
      
      
-     {modalOpen && (
-       <TagsModal
-         tags={modalTags}
-         onToggleTag={handleToggleTag}
-         onCancel={closeModal}
-         onDone={handleDone}
-         title="Choose what you want visible on your profile!"
-       />
-     )}
+     {modalOpen && <TagsModal
+        isOpen={modalOpen}
+        tags={highlightTags}
+        onToggleTag={() => handleToggleTag()}
+        onCancel={() => closeModal()}
+        onDone={() => handleDone()}
+        title="Choose what you want visible on your profile!"
+      />}
     </div>
   );
 }
