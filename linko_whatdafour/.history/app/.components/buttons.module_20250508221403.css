@@ -1,0 +1,234 @@
+.pink {
+  background-color: #FE4366;
+  color: white;
+}
+
+.purple {
+  background-color: #9B71F1;
+  color: white;
+}
+
+.light_purple {
+  background-color: #E0C3FE;
+  color: #06060E; 
+}
+
+.dark_purple {
+  background-color: #0F0E21;
+  color: #C2FF3E;
+  border: 1px solid #C2FF3E;;
+}
+
+.green {
+  background-color: #C2FF3E;
+  color: #06060E;
+
+}
+
+.white {
+  background-color: #FFFEFC;
+  color: #06060E;
+}
+
+.transparent_pinkborder {
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFEFC;
+  border: 1px solid #FE4366;
+}
+
+.transparent_whitetxt {
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFEFC
+}
+
+.transparent_greentxt {
+  background-color: rgba(0, 0, 0, 0);
+  color: #C2FF3E;
+}
+
+.small_round {
+  display: flex;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 2px 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big_round {
+  display: flex;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 2px 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big {
+  font-weight: 700px;
+  font-size: 19px;
+  padding: 14px 20px;
+  border-radius: 15px; 
+  border: none;
+  width: 325px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.medium {
+  font-weight: 700px;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small {
+  font-weight: 700px;
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  min-width: 125px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.smaller {
+  font-weight: 700px;
+  font-size: 15px;
+  padding: 20px 12px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  min-width: 83px;
+  max-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.big_pill {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  min-width: 100px; /* Optional: sets a minimum width */
+  max-width: 100%; 
+  width: auto; 
+  white-space: normal; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small_pill {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  text-align: center;
+  min-width: 100px; /* Optional: sets a minimum width */
+  max-width: 100%; 
+  width: auto; 
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.long {
+  font-weight: 700px;
+  font-size: 16px;
+  padding: 14px 20px;
+  border-radius: 15px; 
+  border: none;
+  width: 370px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.bigPinkButton {
+    width: 100%;
+    max-width: 200px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 16px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color:#FE4366;
+  }
+  
+  .bigPinkButton:hover {
+    background-color:#6B1C2B;
+  }
+
+  .bigPurpleButton {
+    background-color: #9B71F1; /* Purple color that matches the image 
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 19px;
+    padding: 14px 20px;
+    border-radius: 15px; 
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 325px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+  }
+  
+  .bigPurpleButton:hover {
+    background-color: #8a57ff;
+  }
+
+
+  
+  .buttonContainer {
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+  }
+    */
