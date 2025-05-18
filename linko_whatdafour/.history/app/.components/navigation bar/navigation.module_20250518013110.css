@@ -1,0 +1,66 @@
+.navBarWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.bottomNav {
+  background: #06060E;
+  border-radius: 56px;
+  border: 1px solid #9B71F1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 6px 0;
+  box-shadow: 0 -2px 12px #0002;
+  max-width: 500px;
+  width: 100%;
+  gap: 30px;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navBtn {
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  margin-top: 2px;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.navBtn.active,
+.navBtn:hover,
+.navBtn:focus {
+  color: #BCA6F7;
+}
+
+.navBtn.active .icon,
+.navBtn:hover .icon,
+.navBtn:focus .icon {
+  color: #BCA6F7;
+}

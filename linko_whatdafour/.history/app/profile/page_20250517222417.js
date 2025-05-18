@@ -7,7 +7,7 @@ import Button from "@/app/.components/buttons";
 import TagsModal from '../.components/Tags Selection Modal/tagsmodal';
 import { NoteModal, TextEditModal } from '@/app/.components/Modal/modal';
 import { Container } from '@/app/.components/Container/container';
-import NavigationBar from '@/app/.components/Navigation Bar/navigation';
+import NavigationBar from '../.components/navigation bar/navigation';
 
 
 export default function ProfilePage() {
