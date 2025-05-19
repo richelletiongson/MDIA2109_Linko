@@ -26,7 +26,8 @@
 
 .white {
   background-color: #FFFEFC;
-  color: #06060E;
+  color: #412F65;
+  border: 2px solid #9B71F1;
 }
 
 .transparent_pinkborder {
