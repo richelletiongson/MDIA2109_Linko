@@ -1,0 +1,63 @@
+.page {
+    background: url('/MatchingPage_background.png') center center/contain no-repeat fixed;
+    color: #fff;
+    min-height: 700px;
+    width: 402px;
+    margin: 0;
+    font-family: 'Geist', 'Inter', Arial, sans-serif; /*change to lexend later*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 80px; /* for bottom nav */
+    overflow-x: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo {
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  .Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .profileImageSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tagsRow {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .actionButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
