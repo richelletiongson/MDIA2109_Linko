@@ -1,0 +1,106 @@
+.signupPage {
+  min-height: 100vh;
+  background: #0F0E21;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+}
+.logoRow {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.logo {
+  width: 130px;
+  height: auto;
+}
+.welcome {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 16px 0 24px 0;
+}
+.profileIconWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.profileIconCircle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addPhotoBtn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FE5A7D;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+}
+.form {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+}
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  color: #18162A;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.input:focus {
+  box-shadow: 0 0 0 2px #FE5A7D33;
+}
+.nextButton {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 10px;
+  background: #FE5A7D;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.nextButton:hover {
+  background: #ff7a9c;
+} 
