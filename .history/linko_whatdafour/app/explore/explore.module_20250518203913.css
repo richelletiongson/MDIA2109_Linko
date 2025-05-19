@@ -34,7 +34,7 @@
   
   .bannerImg {
     width: 100%;
-    max-width: 332px; /* 150px * 2 + 12px gap + 16px padding on each side */
+    max-width: 150px;
     height: auto;
     border-radius: 12px;
   }

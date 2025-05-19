@@ -1,7 +1,7 @@
 'use client';
 import styles from './explore.module.css';
 import { ContainerWithMedia } from '../.components/container/ContainerWithMedia';
-import { Button } from '../.components/buttons';
+import Button from '../.components/buttons';
 
 const events = [
   {
