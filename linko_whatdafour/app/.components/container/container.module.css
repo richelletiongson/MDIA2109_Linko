@@ -1,16 +1,5 @@
-.container {
-    border-radius: 15px; 
-    padding: 16px;
-    display: flex;
-    justify-content:  flex-start;
-    align-items: center;
-    text-align: center;
-    word-break: break-word;
-    white-space: pre-line;
-  }
 
   /* Color */
-
   .black {
     background-color:  #000000;
   }
