@@ -5,7 +5,7 @@ import styles from './profile.module.css';
 import { useRouter } from 'next/navigation';
 import Button from "@/app/.components/buttons";
 import TagsModal from '../.components/Tags Selection Modal/tagsmodal';
-import { TextEditModal } from '@/app/.components/Modal/modal';
+import { NoteModal, TextEditModal } from '@/app/.components/Modal/modal';
 import { Container } from '@/app/.components/container/container.js';
 import NavigationBar from '@/app/.components/Navigation Bar/navigation';
 

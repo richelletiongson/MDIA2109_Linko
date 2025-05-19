@@ -4,11 +4,7 @@ import Image from "next/image";
 import Button from "../.components/buttons";
 import styles from "./homepage.module.css";
 import { FaHeart, FaTimes, FaRegCommentDots, FaRegCompass, FaRegUser } from "react-icons/fa";
-<<<<<<< HEAD
-import { Container } from '../.components/container/container.js';
-=======
 import { Container } from '@/app/.components/container/container.js';
->>>>>>> b5d9bf04bab0c810b65208c588504b3a38b8045c
 
 export default function HomePage() {
   // Placeholder user data
