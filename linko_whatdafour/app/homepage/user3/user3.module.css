@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'The Rufly';
+    src: url('/font/TheRufly.ttf') format('truetype');
+  
+  }
+  
+  @font-face {
+    font-family: 'Lexend';
+    src: url('/font/Lexend.ttf') format('truetype');
+  }
+  
+  .userName, .userAge {
+    font-family: 'The Rufly', sans-serif;
+    font-size: 32px;
+    text-align: left;
+  }
+  .userName{
+  margin-left: 30px;
+  }
+  
+  .userLocation {
+      font-family: 'Lexend', sans-serif;
+      font-size: 16px;
+      text-align: left;;
+      margin-left: 30px;
+  }
+  
+  
+  .page {
+      background: url('/MatchingPage_background.png');
+      color: #fff;
+      min-height: 600px;
+      width: 402px; 
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-top: 45px;
+      padding-bottom: 80px; /* for bottom nav */
+      overflow-x: hidden;
+      overflow-y: hidden;
+      z-index: 1000;
+      background-size: cover;
+      
+  }
+    
+    .header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .logo {
+      height: 40px;
+      margin: 0 auto;
+    }
+  
+    .Container {
+  margin-left: 30px;
+    }
+  
+  .profileImagesRow {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+      margin-top:10px;
+  }
+  
+  .mainProfileImg {
+      width: 280pt !important;
+      height: 280pt !important;
+      z-index: 2;
+      object-fit: cover;
+  }
+  
+  .sideProfileImg {
+      width: 200pt !important;
+      height: 200pt !important;
+      border-radius: 50%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0.9;
+  }
+  
+  .leftProfileImg {
+      left: 0;
+      transform: translate(-40%, -50%);
+  }
+  
+  .rightProfileImg {
+      right: 0;
+      transform: translate(40%, -50%);
+  }
+  
+  .actionButtons {
+      display: flex;
+      flex-direction: row; 
+      justify-content: center;
+      align-items: center;
+      gap: 90px;            
+      margin: 24px 0 30px 0;   
+    }
+  
+  .tagsRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    gap: 10px;
+    margin: 10px 10px 10px 30px;
+  
+  }
+  
+  .page {
+    transition: opacity 0.4s;
+    opacity: 1;
+  }
+  
+  .page.fadeOut {
+    opacity: 0;
+  }
