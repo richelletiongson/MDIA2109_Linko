@@ -7,6 +7,7 @@ import { FaHeart, FaTimes, FaRegCommentDots, FaRegCompass, FaRegUser } from "rea
 import { Container } from "../.components/container/container.js";
 import NavigationBar from "../.components/Navigation Bar/navigation";
 
+
 export default function HomePage() {
   // Placeholder user data
   const user = {
