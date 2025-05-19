@@ -86,7 +86,9 @@ export default function ProfilePage() {
               size="small_round"
             />
           }
-        />
+        >
+          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={130} height={30} />
+        </Header>
         <div className={styles.profilePicWrapper}>
           <Image src="/photos/profile_picture.jpg" alt="Profile picture" width={419} height={314} className={styles.profilePic} />
           <div className={styles.editPictureButton}>
