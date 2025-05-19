@@ -1,0 +1,38 @@
+.navBarWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.bottomNav {
+  background: #181633;
+  border-radius: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 6px 0;
+  box-shadow: 0 -2px 12px #0002;
+  max-width: 400px;
+  width: 100%;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navBtn:active, .navBtn:focus {
+  color: #C2FF3E;
+}
