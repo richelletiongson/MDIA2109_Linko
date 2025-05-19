@@ -1,16 +1,13 @@
 .container {
-  border-radius: 15px; 
-  padding: 16px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; 
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
+  padding: 16px;
+  border-radius: 15px;
 }
-
-
   /* Color */
-
   .black {
     background-color:  #000000;
   }
