@@ -233,19 +233,13 @@ export default function ProfilePage() {
               {selectedPhotos.map((photo, idx) => (
                 <div key={photo} className={styles.photoWrapper}>
                   <img src={photo} alt={`Photo ${idx+1}`} className={styles.photo} />
-                  <Button
-                    buttonText={<span style={{ fontSize: '2rem', lineHeight: 1, display: 'block' }}>-</span>}
-                    onClick={() => handleRemovePhoto(photo)}
-                    type="pink"
-                    size="small_round"
-                    className={styles.removePhotoBtn}
-                  />
+                  <button onClick={() => handleRemovePhoto(photo)} className={styles.removePhotoBtn} aria-label="Remove photo">-</button>
                 </div>
               ))}
             </div>
           );
         })()}
-        
+        <div style={{ display:'flex', justifyContent:'center', width:'100%' }}>
         <Button 
             buttonText="Edit" 
             type="dark_purple" 
@@ -253,7 +247,7 @@ export default function ProfilePage() {
             border="green_border" 
             onClick={handleOpenPhotoModal} 
           />
-        
+        </div>
       </section>
 
       {/* Genres Section */}

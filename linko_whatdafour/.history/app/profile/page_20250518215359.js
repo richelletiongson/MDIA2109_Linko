@@ -234,7 +234,7 @@ export default function ProfilePage() {
                 <div key={photo} className={styles.photoWrapper}>
                   <img src={photo} alt={`Photo ${idx+1}`} className={styles.photo} />
                   <Button
-                    buttonText={<span style={{ fontSize: '2rem', lineHeight: 1, display: 'block' }}>-</span>}
+                    buttonText="-"
                     onClick={() => handleRemovePhoto(photo)}
                     type="pink"
                     size="small_round"
