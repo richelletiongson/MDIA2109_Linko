@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Button from "@/app/.components/buttons";
 import TagsModal from '../.components/Tags Selection Modal/tagsmodal';
 import { NoteModal, TextEditModal } from '@/app/.components/Modal/modal';
-import { Container } from '../.components/container/container.js';
+import { Container } from '@/app/.components/container/container.module.css';
 import NavigationBar from '@/app/.components/Navigation Bar/navigation';
 
 
@@ -111,7 +111,7 @@ export default function ProfilePage() {
         <section className={styles.section}> 
           <h3 className={styles.sectionTitle}>Note</h3>     
           <div className={styles.noteSectionGap}>
-            <Container
+            <container
               text={note}
               color="darkPurple"
               size="small"
