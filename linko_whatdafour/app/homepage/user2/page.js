@@ -1,40 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Button from "../.components/buttons";
-import styles from "./homepage.module.css";
+import Button from "@/app/.components/buttons";
+import styles from "../homepage.module.css";
 import { FaHeart, FaTimes, FaRegCommentDots, FaRegCompass, FaRegUser } from "react-icons/fa";
-import { Container } from "../.components/container/container.js";
-import NavigationBar from "../.components/Navigation Bar/navigation";
-import { useRouter } from "next/navigation";
+import { Container } from "@/app/.components/container/container.js";
+import NavigationBar from '@/app/.components/Navigation Bar/navigation.js';
 
 
 export default function HomePage() {
-  const router = useRouter();
-  const [fadeOut, setFadeOut] = useState(false);
-
   // Placeholder user data
   const user = {
     name: "Danny",
     age: 22,
-    location: "Vancouver, BC",
-    pronouns: "Non-Binary",
-    ethnicity: "Korean",
-    personality: "ESTP",
-    quote: "The weeknd is going to Van, who wants come?",
+    location: "North Vancouver, BC",
+    pronouns: "He/him",
+    ethnicity: "English",
+    personality: "ISTJ",
+    quote: "I will go to see Drake in Tronoto, looking for friends!",
   };
 
   const users = 
   [
-    { img: "/matchingusers/user-1.png" }, // left
-    { img: "/matchingusers/user1.png" },  // center
-    { img: "/matchingusers/user2.png" },  // right
+    { img: "/matchingusers/user1.png" }, // left
+    { img: "/matchingusers/user2.png" },  // center
+    { img: "/matchingusers/user3.png" },  // right
   ];
-
-  const handleDragEnd = () => {
-    console.log("drag end!");
-    router.push("/homepage/user2");
-  };
 
   return (
     <div className={styles.container}>
@@ -47,15 +38,7 @@ export default function HomePage() {
         <div className={styles.profileImageSection}>
           <div className={styles.profileImagesRow}>
             <Image src={users[0].img} alt="user-1" width={110} height={110} className={styles.sideProfileImg + ' ' + styles.leftProfileImg} />
-            <Image
-              src={users[1].img}
-              alt="user1"
-              width={220}
-              height={220}
-              className={styles.mainProfileImg}
-              draggable
-              onDragEnd={handleDragEnd}
-            />
+            <Image src={users[1].img} alt="user1" width={220} height={220} className={styles.mainProfileImg} />
             <Image src={users[2].img} alt="user2" width={110} height={110} className={styles.sideProfileImg + ' ' + styles.rightProfileImg} />
           </div>
         </div>
@@ -89,7 +72,6 @@ export default function HomePage() {
             buttonText={<FaTimes size={32} />}
             type="pink"
             size="big_round"
-            onClick={() => router.push("/homepage/user2")}
           />
           <Button
             buttonText={<FaHeart size={32} />}
