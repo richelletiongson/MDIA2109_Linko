@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from "classnames";
 import styles from "./modal.module.css";
 import Button from "../buttons";
+import { FiAlertCircle } from "react-icons/fi";
 
 export const WarningMessage = ({
     message = "Please write an answer to continue !",
@@ -102,35 +103,22 @@ export function PhotoGalleryModal({ isOpen, onClose, onDone, availablePhotos, se
         );
     };
     return (
-        <div className={styles.photoGalleryOverlay}>
-            <div className={styles.photoGalleryModalBox}>
-                <h2 className={styles.photoGalleryTitle}>Photo Gallery</h2>
-                <div className={styles.photoGalleryGrid}>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.7)', zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ background: '#18162A', borderRadius: 20, padding: 24, minWidth: 340, maxWidth: 400 }}>
+                <h2 style={{ color: 'white', textAlign: 'center', marginBottom: 16 }}>Photo Gallery</h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 20 }}>
                     {availablePhotos.map((photo) => (
-                        <div
-                            key={photo}
-                            className={
-                                selectedPhotos.includes(photo)
-                                    ? `${styles.photoGalleryItem} ${styles.selected}`
-                                    : styles.photoGalleryItem
-                            }
-                            onClick={() => togglePhoto(photo)}
-                        >
-                            <img
-                                src={photo}
-                                alt="gallery"
-                                className={styles.photoGalleryImg}
-                                style={{ opacity: selectedPhotos.includes(photo) ? 1 : 0.7 }}
-                            />
+                        <div key={photo} style={{ position: 'relative', border: selectedPhotos.includes(photo) ? '3px solid #C2FF3E' : '2px solid #333', borderRadius: 10, overflow: 'hidden', cursor: 'pointer' }} onClick={() => togglePhoto(photo)}>
+                            <img src={photo} alt="gallery" style={{ width: '100%', height: 90, objectFit: 'cover', opacity: selectedPhotos.includes(photo) ? 1 : 0.7 }} />
                             {selectedPhotos.includes(photo) && (
-                                <div className={styles.photoGalleryCheck}>✓</div>
+                                <div style={{ position: 'absolute', top: 6, right: 6, background: '#C2FF3E', borderRadius: '50%', width: 18, height: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: 13 }}>✓</div>
                             )}
                         </div>
                     ))}
                 </div>
-                <div className={styles.photoGalleryFooter}>
-                    <button onClick={onClose} className={`${styles.photoGalleryButton} ${styles.cancel}`}>Cancel</button>
-                    <button onClick={onDone} className={`${styles.photoGalleryButton} ${styles.done}`}>Done</button>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <button onClick={onClose} style={{ background: '#FF5A7D', color: 'white', border: 'none', borderRadius: 8, padding: '8px 20px', fontWeight: 'bold', fontSize: 16 }}>Cancel</button>
+                    <button onClick={onDone} style={{ background: '#C2FF3E', color: '#18162A', border: 'none', borderRadius: 8, padding: '8px 20px', fontWeight: 'bold', fontSize: 16 }}>Done</button>
                 </div>
             </div>
         </div>

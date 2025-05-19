@@ -5,9 +5,10 @@ import styles from './profile.module.css';
 import { useRouter } from 'next/navigation';
 import Button from "@/app/.components/buttons";
 import TagsModal from '../.components/Tags Selection Modal/tagsmodal';
-import { TextEditModal, PhotoGalleryModal } from '@/app/.components/Modal/modal';
-import { Container } from '@/app/.components/container/container.js';
+import { NoteModal, TextEditModal } from '@/app/.components/Modal/modal';
+import { Container } from '../.components/container/container.js';
 import NavigationBar from '@/app/.components/Navigation Bar/navigation';
+
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -34,26 +35,6 @@ export default function ProfilePage() {
   const [bio, setBio] = useState("Hi! My name is Richelle, I love music and I love meeting new people!!");
   const [bioModalOpen, setBioModalOpen] = useState(false);
   const [bioDraft, setBioDraft] = useState(bio);
-
-  // Photos state
-  const placeholderPhotos = [
-    '/photos/profile_picture.jpg',
-    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1519340333755-c190485c5a64?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=facearea&w=400&h=400',
-  ];
-  const [selectedPhotos, setSelectedPhotos] = useState([
-    '/photos/profile_picture.jpg',
-    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400',
-    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400',
-  ]);
-  const [photoModalOpen, setPhotoModalOpen] = useState(false);
 
   const openModal = () => {
     setModalTags(highlightTags);
@@ -89,13 +70,6 @@ export default function ProfilePage() {
   const openBioModal = () => { setBioDraft(bio); setBioModalOpen(true); };
   const closeBioModal = () => setBioModalOpen(false);
   const saveBio = () => { setBio(bioDraft); setBioModalOpen(false); };
-
-  const handleRemovePhoto = (photo) => {
-    setSelectedPhotos((prev) => prev.filter((p) => p !== photo));
-  };
-  const handleOpenPhotoModal = () => setPhotoModalOpen(true);
-  const handleClosePhotoModal = () => setPhotoModalOpen(false);
-  const handleDonePhotoModal = () => setPhotoModalOpen(false);
 
   return (
     <div className={styles.page}>
@@ -219,41 +193,16 @@ export default function ProfilePage() {
       {/* Photos Section */}
       <section className={styles.section}>
         <h3 className={styles.sectionTitle}>Photos</h3>
-        {(() => {
-          const count = selectedPhotos.length;
-          let layoutClass = '';
-          if (count === 1) layoutClass = styles.photosGrid1;
-          else if (count === 2) layoutClass = styles.photosGrid2;
-          else if (count === 3) layoutClass = styles.photosGrid3;
-          else if (count === 4) layoutClass = styles.photosGrid4;
-          else if (count === 5) layoutClass = styles.photosGrid5;
-          else layoutClass = styles.photosGrid6;
-          return (
-            <div className={`${styles.photosGrid} ${layoutClass}`}>
-              {selectedPhotos.map((photo, idx) => (
-                <div key={photo} className={styles.photoWrapper}>
-                  <img src={photo} alt={`Photo ${idx+1}`} className={styles.photo} />
-                  <Button
-                    buttonText={<span style={{ fontSize: '2rem', lineHeight: 1, display: 'block' }}>-</span>}
-                    onClick={() => handleRemovePhoto(photo)}
-                    type="pink"
-                    size="small_round"
-                    className={styles.removePhotoBtn}
-                  />
-                </div>
-              ))}
+        <div className={styles.photosGrid}>
+          {/* Replace with dynamic images as needed */}
+          {[1,2,3,4,5,6].map((n) => (
+            <div key={n} className={styles.photoWrapper}>
+              <Image src={`/photos/photo${n}.jpg`} alt={`Photo ${n}`} width={100} height={100} className={styles.photo} />
+              <button className={styles.removePhotoBtn} aria-label="Remove photo">✖️</button>
             </div>
-          );
-        })()}
-        
-        <Button 
-            buttonText="Edit" 
-            type="dark_purple" 
-            size="long" 
-            border="green_border" 
-            onClick={handleOpenPhotoModal} 
-          />
-        
+          ))}
+        </div>
+        <Button buttonText="+" type="white" size="small" />
       </section>
 
       {/* Genres Section */}
@@ -318,14 +267,6 @@ export default function ProfilePage() {
          title="Choose what you want visible on your profile!"
        />
      )}
-     <PhotoGalleryModal
-       isOpen={photoModalOpen}
-       onClose={handleClosePhotoModal}
-       onDone={handleDonePhotoModal}
-       availablePhotos={placeholderPhotos}
-       selectedPhotos={selectedPhotos}
-       setSelectedPhotos={setSelectedPhotos}
-     />
     </div>
   );
 }

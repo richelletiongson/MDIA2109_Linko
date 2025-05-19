@@ -217,7 +217,7 @@ export default function ProfilePage() {
       </section>
 
       {/* Photos Section */}
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.photosSection}`}>
         <h3 className={styles.sectionTitle}>Photos</h3>
         {(() => {
           const count = selectedPhotos.length;
