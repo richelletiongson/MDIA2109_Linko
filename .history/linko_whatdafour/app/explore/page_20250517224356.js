@@ -8,7 +8,7 @@ const events = [
     artist: 'Jennie Kim',
     location: 'Vancouver, British Columbia',
     date: 'March 13, 2025',
-    image: '/photos/Jennie.png',
+    image: '/photos/jennie.png',
   },
   {
     artist: 'FKA twigs',
@@ -49,7 +49,7 @@ export default function ExplorePage() {
 
       {/* Banner */}
       <div className={styles.banner}>
-        <img src="/photos/explore_banner.png" alt="The Weeknd" className={styles.bannerImg} />
+        <img src="/images/the_weeknd_banner.jpg" alt="The Weeknd" className={styles.bannerImg} />
       </div>
 
       {/* Event Cards */}
@@ -59,18 +59,19 @@ export default function ExplorePage() {
             key={idx}
             color="white"
             size="channelSize"
+            border=""
             imageSrc={event.image}
             imageAlt={event.artist}
             textBlocks={[
-              { text: event.artist, styleKey: "ExtraBold_Channel" },
-              { text: event.location, styleKey: "Regular_Channel" },
-              { text: event.date, styleKey: "ExtraLight_Channel" },
+              { text: event.artist, styleKey: 'artist' },
+              { text: event.location, styleKey: 'location' },
+              { text: event.date, styleKey: 'date' },
             ]}
             button={
               <Button
                 buttonText="Join"
                 type="pink"
-                size="small_pill"
+                size="small"
               />
             }
           />

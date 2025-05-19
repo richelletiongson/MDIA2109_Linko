@@ -20,7 +20,7 @@ const events = [
     artist: 'Olivia Dean',
     location: 'Vancouver, British Columbia',
     date: 'March 15, 2025',
-    image: '/photos/Olivia.png',
+    image: '/photos/Olivia.jpeg',
   },
   {
     artist: 'Drake',
@@ -49,7 +49,7 @@ export default function ExplorePage() {
 
       {/* Banner */}
       <div className={styles.banner}>
-        <img src="/photos/explore_banner.png" alt="The Weeknd" className={styles.bannerImg} />
+        <img src="/images/the_weeknd_banner.jpg" alt="The Weeknd" className={styles.bannerImg} />
       </div>
 
       {/* Event Cards */}
@@ -57,7 +57,7 @@ export default function ExplorePage() {
         {events.map((event, idx) => (
           <ContainerWithMedia
             key={idx}
-            color="white"
+            color="black"
             size="channelSize"
             imageSrc={event.image}
             imageAlt={event.artist}
@@ -70,7 +70,7 @@ export default function ExplorePage() {
               <Button
                 buttonText="Join"
                 type="pink"
-                size="small_pill"
+                size="small"
               />
             }
           />

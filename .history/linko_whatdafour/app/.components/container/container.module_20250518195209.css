@@ -49,8 +49,8 @@
   }
 
   .channelSize {
-    width: 150px;
-    height: 145px;
+    width: 128px;
+    height: 130px;
     border-radius: 8px;
     padding: 10px;
   }
@@ -144,11 +144,4 @@
     line-height: 1;
     margin: 0;
     padding: 0;
-  }
-
-  .buttonWrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 8px;
   }

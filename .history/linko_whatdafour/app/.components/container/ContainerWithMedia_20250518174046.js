@@ -1,6 +1,6 @@
 'use client';
 import classNames from 'classnames';
-import styles from './container.module.css';
+import styles from './ContainerWithMedia.module.css';
 import { Container } from './container.js';
 
 export const ContainerWithMedia = ({

@@ -1,0 +1,140 @@
+.page {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #7b2ff2 0%, #f357a8 100%);
+    padding-bottom: 80px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px 8px 20px;
+    font-size: 1.2em;
+    color: #fff;
+  }
+  
+  .logo {
+    font-family: fantasy;
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+  
+  .searchRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 10px 20px;
+  }
+  
+  .filterIcon {
+    font-size: 1.5em;
+  }
+  
+  .searchInput {
+    flex: 1;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    background: #fff;
+    color: #333;
+    font-size: 1em;
+  }
+  
+  .searchIcon {
+    font-size: 1.3em;
+  }
+  
+  .banner {
+    position: relative;
+    margin: 0 20px 20px 20px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #222;
+  }
+  
+  .bannerImg {
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+  }
+  
+  .bannerText {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    right: 16px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #000;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+  }
+  
+  .dots span {
+    width: 8px;
+    height: 8px;
+    background: #fff7;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .activeDot {
+    background: #fff;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 10px 16px 0 16px;
+  }
+  
+  .bottomNav {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    height: 70px;
+    background: rgba(30, 0, 60, 0.95);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 24px 24px 0 0;
+    z-index: 100;
+  }
+  
+  .navItem {
+    color: #fff9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    gap: 2px;
+  }
+  
+  .active {
+    color: #f357a8;
+  }
+  
+  /* ContainerWithMedia 文字樣式覆蓋 */
+  .artist {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #222;
+    margin-bottom: 2px;
+  }
+  .location {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 2px;
+  }
+  .date {
+    font-size: 0.9em;
+    color: #f357a8;
+  }

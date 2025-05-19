@@ -46,3 +46,12 @@
     gap: 12px 12px;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    border-radius: 15px;
+  }

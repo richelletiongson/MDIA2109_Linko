@@ -41,8 +41,8 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
-    justify-content: center;
-    gap: 12px 12px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 12px 12px; /* row-gap 和 column-gap 都設定舒服的間距 */
+    padding: 16px;
+    justify-items: center; /* 讓 grid item 水平置中 */
   }
-

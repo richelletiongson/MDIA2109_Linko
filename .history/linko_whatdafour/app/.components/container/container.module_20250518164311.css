@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column; 
   justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding: 16px;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  box-sizing: border-box;
   border-radius: 15px;
 }
 
@@ -49,10 +50,10 @@
   }
 
   .channelSize {
-    width: 150px;
-    height: 145px;
+    width: 128px;
+    height: 130px;
     border-radius: 8px;
-    padding: 10px;
+    overflow: hidden;
   }
 
   /* Text */
@@ -77,8 +78,7 @@
     font-family: Lexend;
     text-align: left;
     color: black;
-    padding: 0;
-    margin: 0;
+    line-height: 1.1;
   }
 
   .Regular_Channel {
@@ -87,8 +87,7 @@
     font-family: Lexend;
     text-align: left;
     color: black;
-    padding: 0;
-    margin: 0;
+    line-height: 1.1;
   }
 
   .ExtraLight_Channel {
@@ -97,8 +96,7 @@
     font-family: Lexend;
     text-align: left;
     color: black;
-    padding: 0;
-    margin: 0;
+    line-height: 1.1;
   }
 
   .Bold_CommunityRules {
@@ -138,17 +136,13 @@
   /* Text Group */
   
   .textGroup {
-    text-align: left;
+    text-align: center;
+    margin: 8px 0;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
     line-height: 1;
     margin: 0;
     padding: 0;
-  }
-
-  .buttonWrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 8px;
   }

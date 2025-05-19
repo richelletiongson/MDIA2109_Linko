@@ -28,21 +28,19 @@
   .banner {
     display: flex;
     justify-content: center;
-    margin: 20px 0 0; /* 往下移一點，增加上方空間 */
-    padding: 0 16px;  /* 加一點 padding 避免太貼邊 */
+    margin: 20px 0; /* 可依需求調整上下間距 */
   }
   
   .bannerImg {
-    width: 100%;
-    max-width: 360px; /* 控制最大寬度 */
+    max-width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 12px; 
   }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
-    justify-content: center;
-    gap: 12px 12px;
+    grid-template-columns: repeat(2, 1fr); /* 每列兩個 */
+    column-gap: 10px; 
+    row-gap: 12px; 
+    padding: 16px;
   }
-

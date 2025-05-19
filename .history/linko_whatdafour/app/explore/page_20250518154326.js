@@ -20,7 +20,7 @@ const events = [
     artist: 'Olivia Dean',
     location: 'Vancouver, British Columbia',
     date: 'March 15, 2025',
-    image: '/photos/Olivia.png',
+    image: '/photos/Olivia.jpeg',
   },
   {
     artist: 'Drake',
