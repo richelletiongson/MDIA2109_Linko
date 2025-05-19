@@ -27,7 +27,13 @@ export const ContainerWithMedia = ({
           ))}
         </div>
 
-        {button && <div className={styles.buttonWrapper}>{button}</div>}
+        {button && (
+          <div className={styles.buttonWrapper}>
+            <div className={styles.eventCardButton}>
+              {button}
+            </div>
+          </div>
+        )}
       </Container>
     </div>
   );

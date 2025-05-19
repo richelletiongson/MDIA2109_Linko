@@ -19,5 +19,3 @@ export const Container = ({ text, color, size, border, textStyle, children }) =>
     </div>
   );
 };
-
-

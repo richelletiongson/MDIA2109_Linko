@@ -1,7 +1,8 @@
+'use client';
 import classNames from 'classnames';
-import styles from './container.module.css';
+import styles from './.components/container/container.module.css';
 
-export const Container = ({ text, color, size, border, textStyle, children }) => {
+export const Container = ({ text, color, size, border, textStyle }) => {
   const containerClasses = classNames(styles.container, {
     [styles[color]]: color,
     [styles[size]]: size,
@@ -14,10 +15,7 @@ export const Container = ({ text, color, size, border, textStyle, children }) =>
 
   return (
     <div className={containerClasses}>
-      {text && <p className={textClasses}>{text}</p>}
-      {children}
+      <p className={textClasses}>{text}</p>
     </div>
   );
 };
-
-
