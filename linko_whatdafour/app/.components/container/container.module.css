@@ -1,13 +1,11 @@
 .container {
   display: flex;
   flex-direction: column; 
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding: 16px;
-  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-self: center;
 }
-
   /* Color */
 
   .black {
@@ -33,7 +31,7 @@
   .small {
     width: 356px;
     height: 80px;
-    border-radius: 8px;
+    border-radius: 20px;
   }
   
   .medium {
@@ -61,7 +59,7 @@
     font-size: 16px;
     font-weight: Regular;
     font-family: Lexend;
-    text-align: left;
+  
   }
 
   .Bold {
