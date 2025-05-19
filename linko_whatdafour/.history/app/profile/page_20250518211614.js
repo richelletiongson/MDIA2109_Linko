@@ -5,9 +5,42 @@ import styles from './profile.module.css';
 import { useRouter } from 'next/navigation';
 import Button from "@/app/.components/buttons";
 import TagsModal from '../.components/Tags Selection Modal/tagsmodal';
-import { TextEditModal, PhotoGalleryModal } from '@/app/.components/Modal/modal';
+import { TextEditModal } from '@/app/.components/Modal/modal';
 import { Container } from '@/app/.components/container/container.js';
 import NavigationBar from '@/app/.components/Navigation Bar/navigation';
+
+// PhotoGalleryModal: modal for selecting images
+function PhotoGalleryModal({ isOpen, onClose, onDone, availablePhotos, selectedPhotos, setSelectedPhotos }) {
+  if (!isOpen) return null;
+  const togglePhoto = (photo) => {
+    setSelectedPhotos((prev) =>
+      prev.includes(photo)
+        ? prev.filter((p) => p !== photo)
+        : [...prev, photo]
+    );
+  };
+  return (
+    <div style={{ position: 'fixed', top:0, left:0, width:'100vw', height:'100vh', background:'rgba(0,0,0,0.7)', zIndex:1000, display:'flex', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ background:'#18162A', borderRadius:20, padding:24, minWidth:340, maxWidth:400 }}>
+        <h2 style={{ color:'white', textAlign:'center', marginBottom:16 }}>Photo Gallery</h2>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:8, marginBottom:20 }}>
+          {availablePhotos.map((photo) => (
+            <div key={photo} style={{ position:'relative', border: selectedPhotos.includes(photo) ? '3px solid #C2FF3E' : '2px solid #333', borderRadius:10, overflow:'hidden', cursor:'pointer' }} onClick={() => togglePhoto(photo)}>
+              <img src={photo} alt="gallery" style={{ width:'100%', height:90, objectFit:'cover', opacity: selectedPhotos.includes(photo) ? 1 : 0.7 }} />
+              {selectedPhotos.includes(photo) && (
+                <div style={{ position:'absolute', top:6, right:6, background:'#C2FF3E', borderRadius:'50%', width:18, height:18, display:'flex', alignItems:'center', justifyContent:'center', fontWeight:'bold', fontSize:13 }}>✓</div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div style={{ display:'flex', justifyContent:'space-between' }}>
+          <button onClick={onClose} style={{ background:'#FF5A7D', color:'white', border:'none', borderRadius:8, padding:'8px 20px', fontWeight:'bold', fontSize:16 }}>Cancel</button>
+          <button onClick={onDone} style={{ background:'#C2FF3E', color:'#18162A', border:'none', borderRadius:8, padding:'8px 20px', fontWeight:'bold', fontSize:16 }}>Done</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -219,41 +252,17 @@ export default function ProfilePage() {
       {/* Photos Section */}
       <section className={styles.section}>
         <h3 className={styles.sectionTitle}>Photos</h3>
-        {(() => {
-          const count = selectedPhotos.length;
-          let layoutClass = '';
-          if (count === 1) layoutClass = styles.photosGrid1;
-          else if (count === 2) layoutClass = styles.photosGrid2;
-          else if (count === 3) layoutClass = styles.photosGrid3;
-          else if (count === 4) layoutClass = styles.photosGrid4;
-          else if (count === 5) layoutClass = styles.photosGrid5;
-          else layoutClass = styles.photosGrid6;
-          return (
-            <div className={`${styles.photosGrid} ${layoutClass}`}>
-              {selectedPhotos.map((photo, idx) => (
-                <div key={photo} className={styles.photoWrapper}>
-                  <img src={photo} alt={`Photo ${idx+1}`} className={styles.photo} />
-                  <Button
-                    buttonText={<span style={{ fontSize: '2rem', lineHeight: 1, display: 'block' }}>-</span>}
-                    onClick={() => handleRemovePhoto(photo)}
-                    type="pink"
-                    size="small_round"
-                    className={styles.removePhotoBtn}
-                  />
-                </div>
-              ))}
+        <div className={styles.photosGrid} style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:12, marginBottom:18 }}>
+          {selectedPhotos.map((photo, idx) => (
+            <div key={photo} style={{ position:'relative', borderRadius:16, overflow:'hidden', background:'#222', aspectRatio:'1/1' }}>
+              <img src={photo} alt={`Photo ${idx+1}`} style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+              <button onClick={() => handleRemovePhoto(photo)} style={{ position:'absolute', top:8, right:8, background:'#FF5A7D', color:'white', border:'none', borderRadius:'50%', width:28, height:28, fontSize:20, fontWeight:'bold', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', zIndex:2 }}>-</button>
             </div>
-          );
-        })()}
-        
-        <Button 
-            buttonText="Edit" 
-            type="dark_purple" 
-            size="long" 
-            border="green_border" 
-            onClick={handleOpenPhotoModal} 
-          />
-        
+          ))}
+        </div>
+        <div style={{ display:'flex', justifyContent:'center', marginBottom:8 }}>
+          <button onClick={handleOpenPhotoModal} style={{ width:60, height:60, borderRadius:'50%', background:'#18162A', border:'2px solid #C2FF3E', color:'#C2FF3E', fontSize:40, fontWeight:'bold', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer' }}>+</button>
+        </div>
       </section>
 
       {/* Genres Section */}

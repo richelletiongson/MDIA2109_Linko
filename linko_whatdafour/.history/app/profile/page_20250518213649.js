@@ -233,27 +233,34 @@ export default function ProfilePage() {
               {selectedPhotos.map((photo, idx) => (
                 <div key={photo} className={styles.photoWrapper}>
                   <img src={photo} alt={`Photo ${idx+1}`} className={styles.photo} />
-                  <Button
-                    buttonText={<span style={{ fontSize: '2rem', lineHeight: 1, display: 'block' }}>-</span>}
-                    onClick={() => handleRemovePhoto(photo)}
-                    type="pink"
-                    size="small_round"
-                    className={styles.removePhotoBtn}
-                  />
+                  <button onClick={() => handleRemovePhoto(photo)} className={styles.removePhotoBtn} aria-label="Remove photo">-</button>
                 </div>
               ))}
             </div>
           );
         })()}
-        
-        <Button 
-            buttonText="Edit" 
-            type="dark_purple" 
-            size="long" 
-            border="green_border" 
-            onClick={handleOpenPhotoModal} 
-          />
-        
+        <div style={{ display:'flex', justifyContent:'center', width:'100%' }}>
+          <button
+            onClick={handleOpenPhotoModal}
+            style={{
+              width: '100%',
+              height: 40,
+              borderRadius: 12,
+              background: '#18162A',
+              border: '2px solid #C2FF3E',
+              color: '#C2FF3E',
+              fontSize: 32,
+              fontWeight: 'bold',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              marginBottom: 8,
+            }}
+          >
+            +
+          </button>
+        </div>
       </section>
 
       {/* Genres Section */}
