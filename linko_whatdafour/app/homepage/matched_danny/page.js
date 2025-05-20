@@ -1,18 +1,34 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Button from "@/app/.components/buttons";
 import InputField from "@/app/.components/input_field/input_field.js";
 import styles from "./matched_danny.module.css";
 import Header from '@/app/.components/Header/header';
-
-
+import { useRouter } from "next/navigation";
 
 export default function MatchPage() {
+  const router = useRouter();
+  
   return (
     <div className={styles.container}>
         {/* Header */}
-        <Header />
+        <Header 
+          leftButton={
+            <Button
+              buttonText={<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.95399 11.0783L14.6189 19.4618C14.9816 19.747 15.1572 20.0797 15.1456 20.4599C15.134 20.8401 14.9463 21.1728 14.5826 21.4579C14.2189 21.7431 13.7957 21.8857 13.313 21.8857C12.8303 21.8857 12.4071 21.7431 12.0433 21.4579L0.870603 12.7037C0.580402 12.4755 0.362751 12.2189 0.217651 11.9337C0.0725503 11.6486 0 11.3634 0 11.0783C0 10.7931 0.0725503 10.508 0.217651 10.2228C0.362751 9.93766 0.580402 9.68102 0.870603 9.4529L12.0433 0.670123C12.4061 0.384968 12.8356 0.246953 13.3318 0.256078C13.8281 0.265203 14.2571 0.412723 14.6189 0.698639C14.9807 0.984554 15.162 1.31723 15.163 1.69668C15.164 2.07613 14.9826 2.40881 14.6189 2.69472L3.95399 11.0783Z" fill="white"/>
+              </svg>}
+              type="transparent_whitetxt"
+              size="big_round"
+              onClick={() => router.push('/homepage')}
+            />
+          }
+        />
 
+
+        
       {/* avatar area */}
       <div className={styles.avatars}>
         <div className={styles.avatarLeft}>
