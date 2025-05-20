@@ -5,7 +5,6 @@
   align-items: center;
   text-align: center;
   justify-self: center;
-  text-align: left;
 }
   /* Color */
 
@@ -34,17 +33,17 @@
     height: 80px;
     border-radius: 20px;
   }
-
-  .smallMed {
-    width: 369px;
-    height: 129px;
-    border-radius: 15px;
-  }
   
   .medium {
     width: 374px;
     height: 133px;
     border-radius: 8px;
+  }
+
+  .medium {
+    width: 369px;
+    height: 129px;
+    border-radius: 15px;
   }
   
   .large {
@@ -66,7 +65,7 @@
     font-size: 16px;
     font-weight: Regular;
     font-family: Lexend;
-    padding: 0 16px;
+  
   }
 
   .Bold {

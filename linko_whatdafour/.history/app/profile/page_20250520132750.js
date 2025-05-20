@@ -39,23 +39,24 @@ export default function ProfilePage() {
   // Photos state
   const placeholderPhotos = [
     '/photos/profile_picture.jpg',
-    '/photos/photo_gallery/photo1.JPG',
-    '/photos/photo_gallery/photo2.JPG',
-    '/photos/photo_gallery/photo3.JPG',
-    '/photos/photo_gallery/photo4.jpeg',
-    '/photos/photo_gallery/photo5.jpeg',
-    '/photos/photo_gallery/photo6.jpeg',
-    '/photos/photo_gallery/photo7.jpeg',
-    '/photos/photo_gallery/photo8.jpeg',
-    '/photos/photo_gallery/photo9.jpeg',
-    '/photos/photo_gallery/photo10.jpg',
+    '/photos/photo_gallery/photo_1.JPG',
+    '/photos/photo_gallery/photo_2.JPG',
+    '/photos/photo_gallery/photo_3.JPG',
+    '/photos/photo_gallery/photo_4.jpeg',
+    '/photos/photo_gallery/photo_5.jpeg',
+    '/photos/photo_gallery/photo_6.jpeg',
+    '/photos/photo_gallery/photo_7.jpeg',
+    '/photos/photo_gallery/photo_8.jpeg',
+    '/photos/photo_gallery/photo_9.jpeg',
+    '/photos/photo_gallery/photo_10.jpg',
   ];
   const [selectedPhotos, setSelectedPhotos] = useState([
     '/photos/profile_picture.jpg',
-    '/photos/photo_gallery/photo1.JPG',
-    '/photos/photo_gallery/photo2.JPG',
-    '/photos/photo_gallery/photo3.JPG',
-    '/photos/photo_gallery/photo4.jpeg',
+    '/photos/photo_gallery/photo_1.JPG',
+    '/photos/photo_gallery/photo_2.JPG',
+    '/photos/photo_gallery/photo_3.JPG',
+    '/photos/photo_gallery/photo_4.jpeg',
+    '/photos/photo_gallery/photo_5.jpeg',
   ]);
   const [photoModalOpen, setPhotoModalOpen] = useState(false);
   const [profilePic, setProfilePic] = useState('/photos/profile_picture.jpg');

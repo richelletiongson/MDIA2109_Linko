@@ -56,6 +56,7 @@ export default function ProfilePage() {
     '/photos/photo_gallery/photo2.JPG',
     '/photos/photo_gallery/photo3.JPG',
     '/photos/photo_gallery/photo4.jpeg',
+    '/photos/photo_gallery/photo5.jpeg',
   ]);
   const [photoModalOpen, setPhotoModalOpen] = useState(false);
   const [profilePic, setProfilePic] = useState('/photos/profile_picture.jpg');
