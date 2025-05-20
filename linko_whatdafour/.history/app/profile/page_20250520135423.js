@@ -71,8 +71,8 @@ export default function ProfilePage() {
     { id: 3, text: 'R&B', active: true },
     { id: 4, text: 'Rock', active: false },
     { id: 5, text: 'Jazz', active: false },
-    { id: 6, text: 'EDM', active: false },
-    { id: 7, text: 'Metal', active: false },
+    { id: 6, text: 'Electronic', active: false },
+    { id: 7, text: 'Classical', active: false },
     { id: 8, text: 'Country', active: false },
     { id: 9, text: 'Indie', active: false },
     { id: 10, text: 'K-Pop', active: false },
@@ -92,6 +92,7 @@ export default function ProfilePage() {
     { id: 7, text: 'Battle of the Bands', active: false },
     { id: 8, text: 'Classical recitals', active: false },
     { id: 9, text: 'Workshops', active: false },
+    { id: 10, text: 'Other', active: false },
   ];
   const [eventTags, setEventTags] = useState(initialEventTags);
   const [eventModalOpen, setEventModalOpen] = useState(false);
@@ -429,13 +430,7 @@ export default function ProfilePage() {
           />
         ))}
       </div>
-      <Button 
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={openGenreModal} 
-      />
+      <Button buttonText="Edit" type="white" size="small" onClick={openGenreModal} />
       {genreModalOpen && (
         <TagsModal
           tags={genreModalTags}
@@ -513,6 +508,11 @@ export default function ProfilePage() {
       )}
     </section>
 
+    {/* More About Me Section */}
+    <section className={styles.section}>
+      <h3 className={styles.sectionTitle}>More About Me...</h3>
+      <Button buttonText="Add prompt +" type="white" size="small" />
+    </section>
 
     {/* Private Information Section */}
     <section className={styles.section}>

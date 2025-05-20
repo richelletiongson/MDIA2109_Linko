@@ -513,6 +513,11 @@ export default function ProfilePage() {
       )}
     </section>
 
+    {/* More About Me Section */}
+    <section className={styles.section}>
+      <h3 className={styles.sectionTitle}>More About Me...</h3>
+      <Button buttonText="Add prompt +" type="white" size="small" />
+    </section>
 
     {/* Private Information Section */}
     <section className={styles.section}>
