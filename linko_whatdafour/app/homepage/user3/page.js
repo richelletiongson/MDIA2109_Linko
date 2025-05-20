@@ -76,6 +76,7 @@ export default function HomePage() {
           </div>
         </div>
 
+
         {/* Quote Section */}
         <div className={styles.quoteSection}>
         <Container
