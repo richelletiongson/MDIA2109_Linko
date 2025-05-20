@@ -1,0 +1,39 @@
+.page {
+    max-width: 402px;
+    height: 100vh;
+    background-image: url('/photos/questionaire_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+  }
+  
+  .progressBarWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  .languageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 16px; /* 20px vertical, 16px horizontal gap */
+    justify-content: flex-start;
+    margin-bottom: 48px;
+    margin-top: 16px;
+  }
+  .languagePill {
+    margin: 0;
+  }
+  .languageGridWrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question, .subQuestion {
+    font-size: 23px;
+  }

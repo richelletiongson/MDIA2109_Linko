@@ -1,0 +1,93 @@
+.page {
+    max-width: 402px;
+    height: 100vh;
+    background-image: url('/photos/questionaire_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+  }
+  .welcome {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 16px 0 24px 0;
+  }
+  .profileIconWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .profileIconCircle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .addPhotoBtn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #FE5A7D;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    cursor: pointer;
+  }
+  .form {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding-left: 25px;
+  }
+  .label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .signup_Button {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 75px;
+  }
+  .progressBarWrapper {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  .languageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 16px; /* 20px vertical, 16px horizontal gap */
+    justify-content: flex-start;
+    margin-bottom: 48px;
+    margin-top: 16px;
+  }
+  .languagePill {
+    margin: 0;
+  }
+  .languageGridWrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
