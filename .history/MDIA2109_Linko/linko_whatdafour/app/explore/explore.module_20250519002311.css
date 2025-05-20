@@ -1,0 +1,85 @@
+.page {
+  background: linear-gradient(180deg, #9B71F1 0%, #3F3A87 18.27%, #0F0E21 100%);
+  color: #fff;
+  min-height: 100vh;
+  max-width: 402px;
+  margin: 0 auto;
+  font-family: 'Geist', 'Inter', Arial, sans-serif; /*change to lexend later*/
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 80px; /* for bottom nav */
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 370px;
+  box-sizing: border-box;
+}
+
+.bannerImg {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
+  justify-content: center;
+  gap: 12px 12px;
+  padding: 0 16px;
+}
+
+.searchBarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 8px 0;
+}
+
+.searchBarWithIcon {
+  position: relative;
+  width: 340px; /* longer search bar */
+  display: flex;
+  align-items: center;
+}
+
+.searchBarWithIcon input {
+  width: 100%;
+  padding-right: 40px !important; /* space for the icon */
+  border-radius: 30px !important;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
