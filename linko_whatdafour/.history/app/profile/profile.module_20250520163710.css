@@ -1,3 +1,6 @@
+/* Main container */
+
+
 .page {
   background: linear-gradient(180deg, #9B71F1 0%, #3F3A87 18.27%, #0F0E21 100%);
   color: #fff;
@@ -50,11 +53,13 @@
   margin-top: 2px;
 }
 
+/* Section */
 .section {
   padding: 0px 16px 10px 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
 }
 .sectionTitle {
   color: #fff;
@@ -62,7 +67,6 @@
   font-weight: 700;
   margin-bottom: 8px;
 }
-
 .tagsRow {
   display: flex;
   flex-wrap: wrap;
@@ -79,6 +83,7 @@
   color: #181633;
 }
 
+/* Dynamic photo grid layouts for 1-6 images */
 .photosGrid1 {
   grid-template-columns: 1fr;
 }
@@ -147,7 +152,6 @@
 .privateInfo div {
   margin-bottom: 10px;
 }
-
 .privateInfo span {
   color: #C2FF3E;
   font-weight: 500;

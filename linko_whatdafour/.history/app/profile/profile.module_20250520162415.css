@@ -1,9 +1,13 @@
+/* Main container */
+
+
 .page {
   background: linear-gradient(180deg, #9B71F1 0%, #3F3A87 18.27%, #0F0E21 100%);
   color: #fff;
   min-height: 100vh;
   max-width: 402px;
   margin: 0 auto;
+  font-family: 'Geist', 'Inter', Arial, sans-serif; /*change to lexend later*/
   display: flex;
   flex-direction: column;
   position: relative;
@@ -50,11 +54,13 @@
   margin-top: 2px;
 }
 
+/* Section */
 .section {
-  padding: 0px 16px 10px 16px;
+  padding: 0px 45px 10px 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
 }
 .sectionTitle {
   color: #fff;
@@ -62,7 +68,27 @@
   font-weight: 700;
   margin-bottom: 8px;
 }
-
+/*PLACEHOLDER FOR CONTAINER*/
+.noteBox { 
+  display: flex;
+  align-items: center;                  
+  background: #06060E;
+  border: 1px solid #C2FF3E;
+  border-radius: 15px;
+  min-height: 85px;
+  width: 100%;
+  padding: 10px 12px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.bioBox {
+  background: #2B2750;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  margin-bottom: 8px;
+  width: 100%;
+}
 .tagsRow {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +104,24 @@
   background: #fff;
   color: #181633;
 }
+.highlight {
+  background: #C2FF3E;
+  color: #181633;
+}
+.genre {
+  background: #C2FF3E;
+  color: #181633;
+}
+.event {
+  background: #BCA6F7;
+  color: #181633;
+}
+.interest {
+  background: #C2FF3E;
+  color: #181633;
+}
 
+/* Dynamic photo grid layouts for 1-6 images */
 .photosGrid1 {
   grid-template-columns: 1fr;
 }
@@ -147,7 +190,6 @@
 .privateInfo div {
   margin-bottom: 10px;
 }
-
 .privateInfo span {
   color: #C2FF3E;
   font-weight: 500;
@@ -161,8 +203,11 @@
   display: grid;
   gap: 8px;
   justify-content: center;
+  align-self: center;
   width: fit-content;
-  
+  margin-left: 5px;
+  margin-left: 2px;
+  margin-bottom: 8px;
 }
 
 
