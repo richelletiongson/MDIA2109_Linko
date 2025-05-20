@@ -1,0 +1,16 @@
+.progressBarWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+}
+.progressBarImage {
+  width: auto !important;
+  height: 50px !important;
+  max-width: 100%;
+  display: block;
+}
+
+
+
