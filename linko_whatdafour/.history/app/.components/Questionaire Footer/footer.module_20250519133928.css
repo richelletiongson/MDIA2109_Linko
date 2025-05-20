@@ -1,0 +1,23 @@
+.footerRow {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  max-width: 402px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px 24px 24px;
+  background: transparent;
+  z-index: 20;
+}
+.footerLeft, .footerRight {
+  display: flex;
+  align-items: center;
+}
+.footerCenter {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
