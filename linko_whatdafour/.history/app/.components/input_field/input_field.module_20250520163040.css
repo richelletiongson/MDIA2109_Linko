@@ -15,7 +15,7 @@
   
   .medium {
     width: 288px;
-    height: 65px;
+    height: 55px;
   }
   
   .large {
@@ -29,15 +29,12 @@
   }
 
   .chatSize {
-    width: 400px;
+    width: 380px;
     height: 45px;
     border-radius: 30px;
   }
   
-  .white {
-    background-color: #FFFFFF;
-  }
-
+  
   .purple1 {
     background-color: #E0C3FE;
   }

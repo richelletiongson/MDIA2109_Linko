@@ -15,7 +15,7 @@
   
   .medium {
     width: 288px;
-    height: 65px;
+    height: 55px;
   }
   
   .large {
@@ -34,10 +34,7 @@
     border-radius: 30px;
   }
   
-  .white {
-    background-color: #FFFFFF;
-  }
-
+  
   .purple1 {
     background-color: #E0C3FE;
   }
