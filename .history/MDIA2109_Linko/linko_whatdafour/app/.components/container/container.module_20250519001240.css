@@ -4,7 +4,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  justify-self: center;
+  padding: 16px;
+  border-radius: 15px;
 }
 
   /* Color */
@@ -34,12 +35,6 @@
     height: 80px;
     border-radius: 8px;
   }
-
-  .smallMed {
-    width: 369px;
-    height: 129px;
-    border-radius: 15px;
-  }
   
   .medium {
     width: 374px;
@@ -60,13 +55,6 @@
     padding: 10px;
   }
 
-  .rulesSize {
-    width: 328x;
-    height: 760px;
-    border-radius: 8px;
-    padding: 10px;
-  }
-
   /* Text */
 
   .Regular {
@@ -74,7 +62,6 @@
     font-weight: Regular;
     font-family: Lexend;
     text-align: left;
-    padding: 0 16px;
   }
 
   .Bold {
@@ -157,8 +144,6 @@
     line-height: 1;
     margin: 0;
     padding: 0;
-    width: 100%;
-    align-items: flex-start;
   }
 
   .buttonWrapper {

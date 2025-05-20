@@ -1,0 +1,98 @@
+.rulesBg {
+    min-height: 100vh;
+    max-width: 402px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #9B71F1 0%, #3F3A87 18.27%, #0F0E21 100%);
+    color: #fff;
+    font-family: 'Geist', 'Inter', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 80px;
+    overflow-x: hidden;
+  }
+  
+  .rulesContainerWrapper {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 370px;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 12px 0;
+    letter-spacing: 0.5px;
+    width: 100%;
+    display: block;
+  }
+  
+  .rulesContent {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Lexend', Arial, sans-serif;
+    margin-bottom: 16px;
+  }
+  
+  .welcome {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .intro {
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  
+  .rulesList {
+    padding-left: 18px;
+    margin-bottom: 16px;
+  }
+  
+  .rulesList li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .confirmation {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .buttonRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+  }
+  
+  .backBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 0;
+  }
+  
+  .arrow {
+    font-size: 28px;
+    line-height: 1;
+  }
+  

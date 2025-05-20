@@ -4,12 +4,12 @@
   min-height: 100vh;
   max-width: 402px;
   margin: 0 auto;
-  font-family: 'Geist', 'Inter', Arial, sans-serif;
+  font-family: 'Geist', 'Inter', Arial, sans-serif; /*change to lexend later*/
   display: flex;
   flex-direction: column;
   position: relative;
   padding-top: 45px;
-  padding-bottom: 80px;
+  padding-bottom: 80px; /* for bottom nav */
   overflow-x: hidden;
 }
 
@@ -32,15 +32,13 @@
 .banner {
   display: flex;
   justify-content: center;
-  margin: 20px auto 0 auto;
+  margin: 20px 0 0;
   padding: 0 16px;
-  width: 100%;
-  max-width: 370px;
-  box-sizing: border-box;
 }
 
 .bannerImg {
   width: 100%;
+  max-width: 332px; /* 150px * 2 + 12px gap + 16px padding on each side */
   height: auto;
   border-radius: 12px;
 }
@@ -61,25 +59,7 @@
   margin: 16px 0 8px 0;
 }
 
-.searchBarWithIcon {
-  position: relative;
-  width: 340px; 
-  display: flex;
-  align-items: center;
-}
-
-.searchBarWithIcon input {
+.searchBarWrapper input {
+  max-width: 320px;
   width: 100%;
-  padding-right: 40px !important; 
-  border-radius: 30px !important;
-}
-
-.searchIcon {
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 22px;
-  height: 22px;
-  pointer-events: none;
 }

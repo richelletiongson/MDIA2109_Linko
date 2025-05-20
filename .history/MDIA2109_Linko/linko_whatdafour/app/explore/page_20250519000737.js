@@ -6,7 +6,6 @@ import  Button  from '../.components/buttons';
 import NavigationBar from '@/app/.components/Navigation Bar/navigation';
 import InputField from '../.components/input_field/input_field';
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 const events = [
   {
@@ -49,29 +48,21 @@ const events = [
 
 export default function ExplorePage() {
   const [search, setSearch] = React.useState("");
-  const router = useRouter();
   return (
     <div className={styles.page}>
      {/* Header */}
      <div className={styles.header}>
-          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={120} height={30} className={styles.logo} />
+          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={268} height={268} className={styles.logo} />
      </div>
      {/* Search Bar */}
      <div className={styles.searchBarWrapper}>
-       <div className={styles.searchBarWithIcon}>
-         <InputField
-           value={search}
-           onChange={e => setSearch(e.target.value)}
-           placeholder="Search concert, city..."
-           size="medium"
-           color="purple1"
-         />
-         <img
-           src="/icons/search.svg"
-           alt="search"
-           className={styles.searchIcon}
-         />
-       </div>
+        <InputField
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          placeholder="Search concert, city..."
+          size="mediumforchannel"
+          color="purple1"
+        />
      </div>
       {/* Banner */}
       <div className={styles.banner}>
@@ -97,7 +88,6 @@ export default function ExplorePage() {
                 buttonText="Join"
                 type="pink"
                 size="small_pill"
-                onClick={() => router.push("/explore/rules")} 
               />
             }
           />

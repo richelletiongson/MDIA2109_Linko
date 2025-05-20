@@ -67,7 +67,7 @@ export default function ExplorePage() {
            color="purple1"
          />
          <img
-           src="/icons/search.svg"
+           src="/icons/search.png"
            alt="search"
            className={styles.searchIcon}
          />

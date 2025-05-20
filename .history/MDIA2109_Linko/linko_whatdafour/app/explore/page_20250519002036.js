@@ -6,7 +6,6 @@ import  Button  from '../.components/buttons';
 import NavigationBar from '@/app/.components/Navigation Bar/navigation';
 import InputField from '../.components/input_field/input_field';
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 const events = [
   {
@@ -49,12 +48,11 @@ const events = [
 
 export default function ExplorePage() {
   const [search, setSearch] = React.useState("");
-  const router = useRouter();
   return (
     <div className={styles.page}>
      {/* Header */}
      <div className={styles.header}>
-          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={120} height={30} className={styles.logo} />
+          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={268} height={268} className={styles.logo} />
      </div>
      {/* Search Bar */}
      <div className={styles.searchBarWrapper}>
@@ -67,7 +65,7 @@ export default function ExplorePage() {
            color="purple1"
          />
          <img
-           src="/icons/search.svg"
+           src="/icons/search.png"
            alt="search"
            className={styles.searchIcon}
          />
@@ -97,7 +95,6 @@ export default function ExplorePage() {
                 buttonText="Join"
                 type="pink"
                 size="small_pill"
-                onClick={() => router.push("/explore/rules")} 
               />
             }
           />

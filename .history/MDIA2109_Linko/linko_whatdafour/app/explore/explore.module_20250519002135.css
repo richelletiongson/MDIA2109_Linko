@@ -4,12 +4,12 @@
   min-height: 100vh;
   max-width: 402px;
   margin: 0 auto;
-  font-family: 'Geist', 'Inter', Arial, sans-serif;
+  font-family: 'Geist', 'Inter', Arial, sans-serif; /*change to lexend later*/
   display: flex;
   flex-direction: column;
   position: relative;
   padding-top: 45px;
-  padding-bottom: 80px;
+  padding-bottom: 80px; /* for bottom nav */
   overflow-x: hidden;
 }
 
@@ -63,15 +63,14 @@
 
 .searchBarWithIcon {
   position: relative;
-  width: 340px; 
+  width: 288px; /* match .medium input width */
   display: flex;
   align-items: center;
 }
 
 .searchBarWithIcon input {
   width: 100%;
-  padding-right: 40px !important; 
-  border-radius: 30px !important;
+  padding-right: 40px !important; /* space for the icon */
 }
 
 .searchIcon {
