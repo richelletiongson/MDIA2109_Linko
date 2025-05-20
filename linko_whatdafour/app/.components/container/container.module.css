@@ -34,6 +34,12 @@
     height: 80px;
     border-radius: 8px;
   }
+
+  .smallMed {
+    width: 369px;
+    height: 129px;
+    border-radius: 15px;
+  }
   
   .medium {
     width: 374px;
@@ -68,6 +74,7 @@
     font-weight: Regular;
     font-family: Lexend;
     text-align: left;
+    padding: 0 16px;
   }
 
   .Bold {

@@ -1,0 +1,283 @@
+.pink {
+  background-color: #FE4366;
+  color: white;
+  border: none;
+}
+
+.purple {
+  background-color: #9B71F1;
+  color: white;
+  border: none;
+}
+
+.light_purple {
+  background-color: #E0C3FE;
+  color: #06060E;
+  border: none;
+}
+
+.dark_purple {
+  background-color: #0F0E21;
+  color: #C2FF3E;
+  border: none;
+}
+
+.green {
+  background-color: #C2FF3E;
+  color: #06060E;
+  border: none;
+}
+
+.white {
+  background-color: #FFFEFC;
+  color: #412F65;
+  border: 2px solid #9B71F1;
+}
+
+.transparent_pinkborder {
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFEFC;
+}
+
+.transparent_whitetxt {
+  background: transparent;
+  color: #FFFEFC;
+  border: none;
+}
+
+.transparent_greentxt {
+  background-color: rgba(0, 0, 0, 0);
+  color: #C2FF3E;
+  border: none;
+}
+
+.pink_border {
+  border: 1px solid #FE4366 !important;
+}
+
+.green_border {
+  border: 1px solid #C2FF3E !important;
+}
+
+.small_round {
+  display: flex;
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 2px 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big_round {
+  display: flex;
+  border-radius: 50%;
+  border: none;
+  width: 50px;
+  height: 50px;
+  padding: 2px 2px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.big {
+  font-weight: 700px;
+  font-size: 19px;
+  padding: 14px 20px;
+  border-radius: 15px; 
+  width: 325px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.medium {
+  font-weight: 700px;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small {
+  font-weight: 700px;
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  width: 100%;
+  min-width: 125px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.smaller {
+  font-weight: 700px;
+  font-size: 15px;
+  padding: 12px 12px;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 83px;
+  max-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.big_pill {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  min-width: 100px;
+  max-width: 100%;
+  width: auto;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small_pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  text-align: center;
+  max-width: 100%; 
+  width: auto; 
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.long {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700px;
+  font-size: 16px;
+  padding: 14px 20px;
+  border-radius: 15px; 
+  width: 370px;
+  height: 35px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button.dark_purple.long.green_border:hover {
+  background: #C2FF3E;
+  color: #0F0E21;
+}
+
+.button.nav {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: 'Lexend', 'Geist', 'Inter', Arial, sans-serif;
+  font-weight: 400;
+  box-shadow: none;
+  outline: none;
+}
+
+.button.nav_active {
+  color: #BCA6F7;
+  font-weight: 500;
+}
+
+.button.nav .icon,
+.button.nav_active .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.bigPinkButton {
+    width: 100%;
+    max-width: 200px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 16px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color:#FE4366;
+  }
+  
+  .bigPinkButton:hover {
+    background-color:#6B1C2B;
+  }
+
+  .bigPurpleButton {
+    background-color: #9B71F1; /* Purple color that matches the image 
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 19px;
+    padding: 14px 20px;
+    border-radius: 15px; 
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 325px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+  }
+  
+  .bigPurpleButton:hover {
+    background-color: #8a57ff;
+  }
+
+
+  
+  .buttonContainer {
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+  }
+    */
