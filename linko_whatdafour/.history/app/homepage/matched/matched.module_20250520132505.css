@@ -10,8 +10,8 @@
 
 .container {
     width: 100vw;
-    width: 402px; 
-    min-height: 860px;
+    max-width: 366px;
+    min-height: 728px;
     background: url("/MatchedPage_background.png");
     background-size: cover;
     background-position: center;
@@ -21,38 +21,50 @@
     font-family: "Lexend", "Rufly", sans-serif;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 18px 0 18px;
+    font-size: 2rem;
+    color: #fff;
+}
 
+.logo {
+    height: 30px;
+    margin: 0 auto;
+}
 
 .avatars {
     position: relative;
     width: 100%;
-    height: 380px;
-    margin-top: 40px;
+    height: 160px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .avatarLeft,
 .avatarRight {
     position: absolute;
     top: 0;
-    width: 330px;
-    height: 330px;
+    width: 300px;
+    height: 300px;
     overflow-x: hidden;
 }
 
 .avatarLeft {
-    right: 130px;
-    z-index: 7;
-    margin-top: 50px;
+    left: 60px;
+    z-index: 2;
 }
 
 .avatarRight {
-    left: 130px;
+    left: 120px;
     z-index: 1;
-    filter: grayscale(30%);
+    filter: grayscale(3);
+    opacity: 0.8;
 }
 
 .avatarImg {
@@ -68,8 +80,8 @@
     font-weight: bold;
     text-align: center;
     margin: 40px 0 30px 0;
+    padding-top: 200px;
     text-shadow: 0 2px 8px #0004;
-    margin-bottom: 100px;;
 }
 
 .inputRow {
@@ -98,7 +110,5 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-
+    box-shadow: 0 2px 8px #0002;
 }
-
- 

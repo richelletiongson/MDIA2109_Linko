@@ -23,6 +23,11 @@
 
 
 
+.logo {
+    height: 30px;
+    margin: 0 auto;
+}
+
 .avatars {
     position: relative;
     width: 100%;
@@ -100,5 +105,3 @@
     align-items: center;
 
 }
-
- 
