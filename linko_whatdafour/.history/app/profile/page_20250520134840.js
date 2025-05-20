@@ -71,8 +71,8 @@ export default function ProfilePage() {
     { id: 3, text: 'R&B', active: true },
     { id: 4, text: 'Rock', active: false },
     { id: 5, text: 'Jazz', active: false },
-    { id: 6, text: 'EDM', active: false },
-    { id: 7, text: 'Metal', active: false },
+    { id: 6, text: 'Electronic', active: false },
+    { id: 7, text: 'Classical', active: false },
     { id: 8, text: 'Country', active: false },
     { id: 9, text: 'Indie', active: false },
     { id: 10, text: 'K-Pop', active: false },
@@ -92,6 +92,7 @@ export default function ProfilePage() {
     { id: 7, text: 'Battle of the Bands', active: false },
     { id: 8, text: 'Classical recitals', active: false },
     { id: 9, text: 'Workshops', active: false },
+    { id: 10, text: 'Other', active: false },
   ];
   const [eventTags, setEventTags] = useState(initialEventTags);
   const [eventModalOpen, setEventModalOpen] = useState(false);
@@ -419,14 +420,7 @@ export default function ProfilePage() {
       <h3 className={styles.sectionTitle}>Genres</h3>
       <div className={styles.tagsRow}>
         {genreTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
+          <span key={tag.id} className={`${styles.tag} ${styles.genre}`}>{tag.text}</span>
         ))}
       </div>
       <Button 
@@ -452,14 +446,7 @@ export default function ProfilePage() {
       <h3 className={styles.sectionTitle}>Music Events</h3>
       <div className={styles.tagsRow}>
         {eventTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
+          <span key={tag.id} className={`${styles.tag} ${styles.event}`}>{tag.text}</span>
         ))}
       </div>
       <Button 
@@ -485,14 +472,7 @@ export default function ProfilePage() {
       <h3 className={styles.sectionTitle}>Interests</h3>
       <div className={styles.tagsRow}>
         {interestTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
+          <span key={tag.id} className={`${styles.tag} ${styles.interest}`}>{tag.text}</span>
         ))}
       </div>
       <Button 
@@ -513,6 +493,11 @@ export default function ProfilePage() {
       )}
     </section>
 
+    {/* More About Me Section */}
+    <section className={styles.section}>
+      <h3 className={styles.sectionTitle}>More About Me...</h3>
+      <Button buttonText="Add prompt +" type="white" size="small" />
+    </section>
 
     {/* Private Information Section */}
     <section className={styles.section}>

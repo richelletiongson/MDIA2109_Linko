@@ -12,7 +12,7 @@
   flex-direction: column;
   position: relative;
   padding-top: 20px;
-  padding-bottom: 100px; /* for bottom nav */
+  padding-bottom: 80px; /* for bottom nav */
   overflow-x: hidden;
 }
 
@@ -197,13 +197,6 @@
   cursor: pointer;
 }
 
-.privateInfo div {
-  margin-bottom: 10px;
-}
-.privateInfo span {
-  color: #C2FF3E;
-  font-weight: 500;
-}
 
 /* Bottom Navigation */
 .bottomNav {

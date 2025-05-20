@@ -64,56 +64,6 @@ export default function ProfilePage() {
   const [profilePicModalOpen, setProfilePicModalOpen] = useState(false);
   const [profilePicSelection, setProfilePicSelection] = useState([profilePic]);
 
-  // Genres state
-  const initialGenreTags = [
-    { id: 1, text: 'Hip-Hop', active: true },
-    { id: 2, text: 'Pop', active: true },
-    { id: 3, text: 'R&B', active: true },
-    { id: 4, text: 'Rock', active: false },
-    { id: 5, text: 'Jazz', active: false },
-    { id: 6, text: 'EDM', active: false },
-    { id: 7, text: 'Metal', active: false },
-    { id: 8, text: 'Country', active: false },
-    { id: 9, text: 'Indie', active: false },
-    { id: 10, text: 'K-Pop', active: false },
-  ];
-  const [genreTags, setGenreTags] = useState(initialGenreTags);
-  const [genreModalOpen, setGenreModalOpen] = useState(false);
-  const [genreModalTags, setGenreModalTags] = useState(genreTags);
-
-  // Music Events state
-  const initialEventTags = [
-    { id: 1, text: 'Live concerts', active: true },
-    { id: 2, text: 'Music festivals', active: true },
-    { id: 3, text: 'Open mic', active: false },
-    { id: 4, text: 'Club nights', active: false },
-    { id: 5, text: 'Karaoke', active: false },
-    { id: 6, text: 'DJ sets', active: false },
-    { id: 7, text: 'Battle of the Bands', active: false },
-    { id: 8, text: 'Classical recitals', active: false },
-    { id: 9, text: 'Workshops', active: false },
-  ];
-  const [eventTags, setEventTags] = useState(initialEventTags);
-  const [eventModalOpen, setEventModalOpen] = useState(false);
-  const [eventModalTags, setEventModalTags] = useState(eventTags);
-
-  // Interests state
-  const initialInterestTags = [
-    { id: 1, text: 'Traveling', active: true },
-    { id: 2, text: 'Sports', active: true },
-    { id: 3, text: 'Cooking', active: false },
-    { id: 4, text: 'Reading', active: false },
-    { id: 5, text: 'Photography', active: false },
-    { id: 6, text: 'Dancing', active: false },
-    { id: 7, text: 'Gaming', active: false },
-    { id: 8, text: 'Art', active: false },
-    { id: 9, text: 'Volunteering', active: false },
-    { id: 10, text: 'Other', active: false },
-  ];
-  const [interestTags, setInterestTags] = useState(initialInterestTags);
-  const [interestModalOpen, setInterestModalOpen] = useState(false);
-  const [interestModalTags, setInterestModalTags] = useState(interestTags);
-
   const openModal = () => {
     setModalTags(highlightTags);
     setModalOpen(true);
@@ -164,60 +114,6 @@ export default function ProfilePage() {
   const handleDoneProfilePicModal = () => {
     if (profilePicSelection.length > 0) setProfilePic(profilePicSelection[0]);
     setProfilePicModalOpen(false);
-  };
-
-  // Genres handlers
-  const openGenreModal = () => {
-    setGenreModalTags(genreTags);
-    setGenreModalOpen(true);
-  };
-  const closeGenreModal = () => setGenreModalOpen(false);
-  const handleToggleGenreTag = idx => {
-    setGenreModalTags(tags =>
-      tags.map((tag, i) =>
-        i === idx ? { ...tag, active: !tag.active } : tag
-      )
-    );
-  };
-  const handleDoneGenreModal = () => {
-    setGenreTags(genreModalTags);
-    setGenreModalOpen(false);
-  };
-
-  // Music Events handlers
-  const openEventModal = () => {
-    setEventModalTags(eventTags);
-    setEventModalOpen(true);
-  };
-  const closeEventModal = () => setEventModalOpen(false);
-  const handleToggleEventTag = idx => {
-    setEventModalTags(tags =>
-      tags.map((tag, i) =>
-        i === idx ? { ...tag, active: !tag.active } : tag
-      )
-    );
-  };
-  const handleDoneEventModal = () => {
-    setEventTags(eventModalTags);
-    setEventModalOpen(false);
-  };
-
-  // Interests handlers
-  const openInterestModal = () => {
-    setInterestModalTags(interestTags);
-    setInterestModalOpen(true);
-  };
-  const closeInterestModal = () => setInterestModalOpen(false);
-  const handleToggleInterestTag = idx => {
-    setInterestModalTags(tags =>
-      tags.map((tag, i) =>
-        i === idx ? { ...tag, active: !tag.active } : tag
-      )
-    );
-  };
-  const handleDoneInterestModal = () => {
-    setInterestTags(interestModalTags);
-    setInterestModalOpen(false);
   };
 
   // Settings button for header
@@ -418,101 +314,38 @@ export default function ProfilePage() {
     <section className={styles.section}>
       <h3 className={styles.sectionTitle}>Genres</h3>
       <div className={styles.tagsRow}>
-        {genreTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
-        ))}
+        <span className={`${styles.tag} ${styles.genre}`}>Hip-Hop</span>
+        <span className={`${styles.tag} ${styles.genre}`}>Pop</span>
+        <span className={`${styles.tag} ${styles.genre}`}>R&B</span>
       </div>
-      <Button 
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={openGenreModal} 
-      />
-      {genreModalOpen && (
-        <TagsModal
-          tags={genreModalTags}
-          onToggleTag={handleToggleGenreTag}
-          onCancel={closeGenreModal}
-          onDone={handleDoneGenreModal}
-          title="Select your favorite genres!"
-        />
-      )}
+      <Button buttonText="+" type="white" size="small" />
     </section>
 
     {/* Music Events Section */}
     <section className={styles.section}>
       <h3 className={styles.sectionTitle}>Music Events</h3>
       <div className={styles.tagsRow}>
-        {eventTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
-        ))}
+        <span className={`${styles.tag} ${styles.event}`}>Live concerts</span>
+        <span className={`${styles.tag} ${styles.event}`}>Music festivals</span>
       </div>
-      <Button 
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={openEventModal} 
-      />
-      {eventModalOpen && (
-        <TagsModal
-          tags={eventModalTags}
-          onToggleTag={handleToggleEventTag}
-          onCancel={closeEventModal}
-          onDone={handleDoneEventModal}
-          title="Select your favorite music events!"
-        />
-      )}
+      <Button buttonText="+" type="white" size="small" />
     </section>
 
     {/* Interests Section */}
     <section className={styles.section}>
       <h3 className={styles.sectionTitle}>Interests</h3>
       <div className={styles.tagsRow}>
-        {interestTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
-        ))}
+        <span className={`${styles.tag} ${styles.interest}`}>Traveling</span>
+        <span className={`${styles.tag} ${styles.interest}`}>Sports</span>
       </div>
-      <Button 
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={openInterestModal} 
-      />
-      {interestModalOpen && (
-        <TagsModal
-          tags={interestModalTags}
-          onToggleTag={handleToggleInterestTag}
-          onCancel={closeInterestModal}
-          onDone={handleDoneInterestModal}
-          title="Select your interests!"
-        />
-      )}
+      <Button buttonText="+" type="white" size="small" />
     </section>
 
+    {/* More About Me Section */}
+    <section className={styles.section}>
+      <h3 className={styles.sectionTitle}>More About Me...</h3>
+      <Button buttonText="Add prompt +" type="white" size="small" />
+    </section>
 
     {/* Private Information Section */}
     <section className={styles.section}>

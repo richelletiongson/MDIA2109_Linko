@@ -71,8 +71,8 @@ export default function ProfilePage() {
     { id: 3, text: 'R&B', active: true },
     { id: 4, text: 'Rock', active: false },
     { id: 5, text: 'Jazz', active: false },
-    { id: 6, text: 'EDM', active: false },
-    { id: 7, text: 'Metal', active: false },
+    { id: 6, text: 'Electronic', active: false },
+    { id: 7, text: 'Classical', active: false },
     { id: 8, text: 'Country', active: false },
     { id: 9, text: 'Indie', active: false },
     { id: 10, text: 'K-Pop', active: false },
@@ -92,6 +92,7 @@ export default function ProfilePage() {
     { id: 7, text: 'Battle of the Bands', active: false },
     { id: 8, text: 'Classical recitals', active: false },
     { id: 9, text: 'Workshops', active: false },
+    { id: 10, text: 'Other', active: false },
   ];
   const [eventTags, setEventTags] = useState(initialEventTags);
   const [eventModalOpen, setEventModalOpen] = useState(false);
@@ -419,14 +420,7 @@ export default function ProfilePage() {
       <h3 className={styles.sectionTitle}>Genres</h3>
       <div className={styles.tagsRow}>
         {genreTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
+          <span key={tag.id} className={`${styles.tag} ${styles.genre}`}>{tag.text}</span>
         ))}
       </div>
       <Button 
@@ -451,68 +445,27 @@ export default function ProfilePage() {
     <section className={styles.section}>
       <h3 className={styles.sectionTitle}>Music Events</h3>
       <div className={styles.tagsRow}>
-        {eventTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
-        ))}
+        <span className={`${styles.tag} ${styles.event}`}>Live concerts</span>
+        <span className={`${styles.tag} ${styles.event}`}>Music festivals</span>
       </div>
-      <Button 
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={openEventModal} 
-      />
-      {eventModalOpen && (
-        <TagsModal
-          tags={eventModalTags}
-          onToggleTag={handleToggleEventTag}
-          onCancel={closeEventModal}
-          onDone={handleDoneEventModal}
-          title="Select your favorite music events!"
-        />
-      )}
+      <Button buttonText="+" type="white" size="small" />
     </section>
 
     {/* Interests Section */}
     <section className={styles.section}>
       <h3 className={styles.sectionTitle}>Interests</h3>
       <div className={styles.tagsRow}>
-        {interestTags.filter(tag => tag.active).map((tag, idx) => (
-          <Button
-            key={tag.id}
-            buttonText={tag.text}
-            type={idx % 2 === 0 ? "green" : "light_purple"}
-            size="big_pill"
-            style={{ margin: "4px" }}
-            disabled
-          />
-        ))}
+        <span className={`${styles.tag} ${styles.interest}`}>Traveling</span>
+        <span className={`${styles.tag} ${styles.interest}`}>Sports</span>
       </div>
-      <Button 
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={openInterestModal} 
-      />
-      {interestModalOpen && (
-        <TagsModal
-          tags={interestModalTags}
-          onToggleTag={handleToggleInterestTag}
-          onCancel={closeInterestModal}
-          onDone={handleDoneInterestModal}
-          title="Select your interests!"
-        />
-      )}
+      <Button buttonText="+" type="white" size="small" />
     </section>
 
+    {/* More About Me Section */}
+    <section className={styles.section}>
+      <h3 className={styles.sectionTitle}>More About Me...</h3>
+      <Button buttonText="Add prompt +" type="white" size="small" />
+    </section>
 
     {/* Private Information Section */}
     <section className={styles.section}>
