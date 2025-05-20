@@ -15,7 +15,7 @@
   
   .medium {
     width: 288px;
-    height: 55px;
+    height: 65px;
   }
   
   .large {
@@ -28,7 +28,10 @@
     height: 54.97px;
   }
   
-  
+  .white {
+    background-color: #FFFFFF;
+  }
+
   .purple1 {
     background-color: #E0C3FE;
   }
