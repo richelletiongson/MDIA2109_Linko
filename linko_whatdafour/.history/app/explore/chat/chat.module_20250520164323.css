@@ -1,0 +1,133 @@
+.page {
+  background: #0F0E21;
+  color: #fff;
+  min-height: 100vh;
+  max-width: 402px;
+  margin: 0 auto;
+  font-family: 'Lexend' !important;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 80px;
+  overflow-x: hidden;
+  font-size: 15px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 0 16px 0;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.headerTitle {
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff;
+  flex: 1;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 18px;
+  margin-right: 12px;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 18px;
+  margin-left: 12px;
+}
+
+.chatContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 12px 12px 12px;
+  overflow-y: auto;
+}
+
+.messageRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;  /* border: 2px solid #fff; */
+}
+
+.inputBarWrapper {
+  position: fixed;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 380px;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.inputBar {
+  display: flex;
+  align-items: center;
+  background: #DDC6FA;
+  border-radius: 999px;
+  width: 100%;
+  max-width: 380px;
+  height: 56px;
+  padding: 0 16px 0 24px;
+  box-sizing: border-box;
+}
+
+.inputBarInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 22px;
+  color: #18153A;
+  font-family: 'Lexend', 'Geist', 'Inter', Arial, sans-serif;
+  height: 54px;
+}
+
+.inputBarBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #7B66C5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.inputBarBtn span {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+body, .page, .header, .headerTitle, .backBtn, .menuBtn, .chatContainer, .messageRow, .inputBarWrapper, .inputBar, .inputBarInput, .inputBarBtn {
+  font-family: 'Lexend', 'Geist', 'Inter', Arial, sans-serif !important;
+}

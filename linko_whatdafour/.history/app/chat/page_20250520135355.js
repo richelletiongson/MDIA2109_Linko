@@ -27,6 +27,7 @@ export default function Page() {
                 </div>
             )}
 
+
             {showModal && (
                 <GetStartedModal
                     isOpen={true}

@@ -5,7 +5,6 @@
   align-items: flex-start;
   text-align: left;
   justify-self: center;
-  color: #18153A;
 }
 
   /* Color */
@@ -71,42 +70,27 @@
   .chatSize {
     width: 370px;
     height: 55px;
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 10px;
   }
 
   .chatSizeLong {
-    width: 260px;
-    height: 20px;
-    border-radius: 30px;
+    width: 295px;
+    height: 40px;
+    border-radius: 20px;
     padding: 10px;
   }
   .chatSizeMedium {
-    width: 210px;
-    height: 20px;
-    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
     padding: 10px;
   }
-
-  .chatSizeMiddle {
-    width: 158px;
-    height: 20px;
-    border-radius: 30px;
-    padding: 10px;
-  }
-
 
   .chatSizeShort {
-    width: 80px;
-    height: 20px;
-    border-radius: 30px;
-    padding: 10px;
-  }
-
-  .chatSizeShortest {
-    width: 65px;
-    height: 20px;
-    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
     padding: 10px;
   }
   /* Text */
