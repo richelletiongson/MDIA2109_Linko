@@ -266,7 +266,7 @@
 
 .photosGrid {
   display: grid;
-  gap: 8px;
+  gap: 0px;
   margin-bottom: 8px;
   justify-content: center;
   width: fit-content;

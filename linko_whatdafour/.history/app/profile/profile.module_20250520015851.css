@@ -179,6 +179,7 @@
   height: 80px;
   object-fit: cover;
   border-radius: 20px;
+  margin-right: 0px;
 }
 .removePhotoBtn {
   position: absolute;

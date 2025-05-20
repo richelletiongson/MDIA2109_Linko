@@ -133,6 +133,7 @@
 }
 .photosGrid4 {
   grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
 }
 .photosGrid4 .photoWrapper {
   aspect-ratio: 1/1;

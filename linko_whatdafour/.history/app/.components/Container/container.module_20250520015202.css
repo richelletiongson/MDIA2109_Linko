@@ -39,6 +39,7 @@
     width: 369px;
     height: 129px;
     border-radius: 15px;
+    padding: 0 16px
   }
   
   .medium {
@@ -66,7 +67,7 @@
     font-size: 16px;
     font-weight: Regular;
     font-family: Lexend;
-    padding: 0 16px;
+  
   }
 
   .Bold {

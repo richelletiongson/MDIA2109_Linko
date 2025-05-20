@@ -39,23 +39,20 @@ export default function ProfilePage() {
   // Photos state
   const placeholderPhotos = [
     '/photos/profile_picture.jpg',
-    '/photos/photo_gallery/photo1.JPG',
-    '/photos/photo_gallery/photo2.JPG',
-    '/photos/photo_gallery/photo3.JPG',
-    '/photos/photo_gallery/photo4.jpeg',
-    '/photos/photo_gallery/photo5.jpeg',
-    '/photos/photo_gallery/photo6.jpeg',
-    '/photos/photo_gallery/photo7.jpeg',
-    '/photos/photo_gallery/photo8.jpeg',
-    '/photos/photo_gallery/photo9.jpeg',
-    '/photos/photo_gallery/photo10.jpg',
+    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1519340333755-c190485c5a64?auto=format&fit=facearea&w=400&h=400',
   ];
   const [selectedPhotos, setSelectedPhotos] = useState([
     '/photos/profile_picture.jpg',
-    '/photos/photo_gallery/photo1.JPG',
-    '/photos/photo_gallery/photo2.JPG',
-    '/photos/photo_gallery/photo3.JPG',
-    '/photos/photo_gallery/photo4.jpeg',
+    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=facearea&w=400&h=400',
   ]);
   const [photoModalOpen, setPhotoModalOpen] = useState(false);
   const [profilePic, setProfilePic] = useState('/photos/profile_picture.jpg');
@@ -134,7 +131,11 @@ export default function ProfilePage() {
     <div className={styles.page}>
       <Header rightButton={settingsButton} />
       <div className={styles.profilePicWrapper}>
-        <Image src={profilePic} alt="Profile picture" width={419} height={314} className={styles.profilePic} />
+        {profilePic.startsWith('http') ? (
+          <img src={profilePic} alt="Profile picture" width={419} height={314} className={styles.profilePic} />
+        ) : (
+          <Image src={profilePic} alt="Profile picture" width={419} height={314} className={styles.profilePic} />
+        )}
         <div className={styles.editPictureButton}>
           <Button
             buttonText={<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,6 +274,7 @@ export default function ProfilePage() {
           border="green_border" 
           onClick={handleOpenPhotoModal} 
         />
+      
     </section>
 
     {/* Genres Section */}

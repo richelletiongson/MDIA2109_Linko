@@ -39,30 +39,22 @@ export default function ProfilePage() {
   // Photos state
   const placeholderPhotos = [
     '/photos/profile_picture.jpg',
-    '/photos/photo_gallery/photo1.JPG',
-    '/photos/photo_gallery/photo2.JPG',
-    '/photos/photo_gallery/photo3.JPG',
-    '/photos/photo_gallery/photo4.jpeg',
-    '/photos/photo_gallery/photo5.jpeg',
-    '/photos/photo_gallery/photo6.jpeg',
-    '/photos/photo_gallery/photo7.jpeg',
-    '/photos/photo_gallery/photo8.jpeg',
-    '/photos/photo_gallery/photo9.jpeg',
-    '/photos/photo_gallery/photo10.jpg',
+    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1519340333755-c190485c5a64?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=facearea&w=400&h=400',
   ];
   const [selectedPhotos, setSelectedPhotos] = useState([
     '/photos/profile_picture.jpg',
-    '/photos/photo_gallery/photo1.JPG',
-    '/photos/photo_gallery/photo2.JPG',
-    '/photos/photo_gallery/photo3.JPG',
-    '/photos/photo_gallery/photo4.jpeg',
+    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&h=400',
+    'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=400&h=400',
   ]);
   const [photoModalOpen, setPhotoModalOpen] = useState(false);
-  const [profilePic, setProfilePic] = useState('/photos/profile_picture.jpg');
-
-  // Single-select state for profile pic modal
-  const [profilePicModalOpen, setProfilePicModalOpen] = useState(false);
-  const [profilePicSelection, setProfilePicSelection] = useState([profilePic]);
 
   const openModal = () => {
     setModalTags(highlightTags);
@@ -106,16 +98,6 @@ export default function ProfilePage() {
   const handleClosePhotoModal = () => setPhotoModalOpen(false);
   const handleDonePhotoModal = () => setPhotoModalOpen(false);
 
-  const handleOpenProfilePicModal = () => {
-    setProfilePicSelection([profilePic]);
-    setProfilePicModalOpen(true);
-  };
-  const handleCloseProfilePicModal = () => setProfilePicModalOpen(false);
-  const handleDoneProfilePicModal = () => {
-    if (profilePicSelection.length > 0) setProfilePic(profilePicSelection[0]);
-    setProfilePicModalOpen(false);
-  };
-
   // Settings button for header
   const settingsButton = (
     <Button
@@ -134,20 +116,20 @@ export default function ProfilePage() {
     <div className={styles.page}>
       <Header rightButton={settingsButton} />
       <div className={styles.profilePicWrapper}>
-        <Image src={profilePic} alt="Profile picture" width={419} height={314} className={styles.profilePic} />
+        <Image src="/photos/profile_picture.jpg" alt="Profile picture" width={419} height={314} className={styles.profilePic} />
         <div className={styles.editPictureButton}>
-          <Button
-            buttonText={<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="Group">
-                <circle id="Ellipse 74" cx="27.125" cy="27.125" r="27.125" fill="#0B0A17"/>
-                <path id="Vector" d="M19.25 19.25H17.5C16.5717 19.25 15.6815 19.6187 15.0251 20.2751C14.3687 20.9315 14 21.8217 14 22.75V38.5C14 39.4283 14.3687 40.3185 15.0251 40.9749C15.6815 41.6313 16.5717 42 17.5 42H33.25C34.1783 42 35.0685 41.6313 35.7249 40.9749C36.3813 40.3185 36.75 39.4283 36.75 38.5V36.75" stroke="#C2FF3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path id="Vector_2" d="M35 15.7499L40.25 20.9999M42.6737 18.5237C43.363 17.8345 43.7502 16.8997 43.7502 15.9249C43.7502 14.9502 43.363 14.0154 42.6737 13.3262C41.9845 12.637 41.0497 12.2498 40.075 12.2498C39.1003 12.2498 38.1655 12.637 37.4763 13.3262L22.75 27.9999V33.2499H28L42.6737 18.5237Z" stroke="#C2FF3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </g>
+        <Button
+          buttonText={<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Group">
+            <circle id="Ellipse 74" cx="27.125" cy="27.125" r="27.125" fill="#0B0A17"/>
+            <path id="Vector" d="M19.25 19.25H17.5C16.5717 19.25 15.6815 19.6187 15.0251 20.2751C14.3687 20.9315 14 21.8217 14 22.75V38.5C14 39.4283 14.3687 40.3185 15.0251 40.9749C15.6815 41.6313 16.5717 42 17.5 42H33.25C34.1783 42 35.0685 41.6313 35.7249 40.9749C36.3813 40.3185 36.75 39.4283 36.75 38.5V36.75" stroke="#C2FF3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path id="Vector_2" d="M35 15.7499L40.25 20.9999M42.6737 18.5237C43.363 17.8345 43.7502 16.8997 43.7502 15.9249C43.7502 14.9502 43.363 14.0154 42.6737 13.3262C41.9845 12.637 41.0497 12.2498 40.075 12.2498C39.1003 12.2498 38.1655 12.637 37.4763 13.3262L22.75 27.9999V33.2499H28L42.6737 18.5237Z" stroke="#C2FF3E" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
             </svg>}
-            onClick={handleOpenProfilePicModal}
-            type="dark_purple"
-            size="big_round"
-          />
+          onClick={()=>router.push("/profile/settings")}                    /*PLACEHOLDER FOR MODAL*/
+          type="dark_purple"
+          size="big_round"
+        />
         </div>
       </div>
       <div className={styles.profileInfo}>
@@ -273,6 +255,7 @@ export default function ProfilePage() {
           border="green_border" 
           onClick={handleOpenPhotoModal} 
         />
+      
     </section>
 
     {/* Genres Section */}
@@ -337,25 +320,6 @@ export default function ProfilePage() {
        title="Choose what you want visible on your profile!"
      />
    )}
-   <PhotoGalleryModal
-     isOpen={profilePicModalOpen}
-     onClose={handleCloseProfilePicModal}
-     onDone={handleDoneProfilePicModal}
-     availablePhotos={placeholderPhotos}
-     selectedPhotos={profilePicSelection}
-     setSelectedPhotos={(photosOrUpdater) => {
-       if (typeof photosOrUpdater === 'function') {
-         setProfilePicSelection(prev => {
-           const result = photosOrUpdater(prev);
-           // Only allow one selection (last one)
-           if (result.length > 1) return [result[result.length - 1]];
-           return result;
-         });
-       } else if (Array.isArray(photosOrUpdater)) {
-         setProfilePicSelection(photosOrUpdater.length > 0 ? [photosOrUpdater[photosOrUpdater.length - 1]] : []);
-       }
-     }}
-   />
    <PhotoGalleryModal
      isOpen={photoModalOpen}
      onClose={handleClosePhotoModal}
