@@ -8,19 +8,19 @@ import Button from '@/app/.components/buttons';
 import ProgressBar from '@/app/.components/progress bar/progress';
 import QuestionaireFooter from '@/app/.components/Questionaire Footer/footer';
 
-const GENDERS = [
-  "Male", "Female", "Non-binary", "No preference"
+const MBTI = [
+  "ESTP", "ESFP", "ISTP", "ISFP", "ESTJ", "ESFP", "ISTJ", "ISFJ", "ENTJ", "ENTP", "INTJ", "INTP", "ENFJ", "ENFP", "INFJ", "INFP", "I don't know"
 ];
 
-export default function Questionaire02Page() {
+export default function Questionaire03Page() {
     const router = useRouter();
     const [selected, setSelected] = useState([]);
 
-    const toggleGender = (gender) => {
+    const toggleMbti = (mbti) => {
         setSelected(selected =>
-            selected.includes(gender)
-                ? selected.filter(g => g !== gender)
-                : [...selected, gender]
+            selected.includes(mbti)
+                ? selected.filter(g => g !== mbti)
+                : [...selected, mbti]
         );
     };
 
@@ -33,18 +33,18 @@ export default function Questionaire02Page() {
             </div>
             {/* Question */}
             <h2 className={styles.question}>
-                What is your gender?<br />
+                What's your MBTI?<br />
                 <span className={styles.subQuestion}>( Select all that apply )</span>
             </h2>
             <div className={styles.languageGridWrapper}>
             <div className={styles.languageGrid}>
-                {GENDERS.map(gender => (
+                {MBTI.map(mbti => (
                     <Button
-                        key={gender}
-                        buttonText={gender}
-                        type={selected.includes(gender) ? 'green' : 'white'}
+                        key={mbti}
+                        buttonText={mbti}
+                        type={selected.includes(mbti) ? 'green' : 'white'}
                         size="big_pill"
-                        onClick={() => toggleGender(gender)}
+                        onClick={() => toggleGender(mbti)}
                         className={styles.languagePill}
                     />
                 ))}
@@ -58,7 +58,7 @@ export default function Questionaire02Page() {
                             </svg>}
                         type="pink"
                         size="big_round"
-                        onClick={() => router.push("/onboard/signup/questionaire/questionaire01")}
+                        onClick={() => router.push("/onboard/signup/questionaire/questionaire02")}
                     />
                 }
                 rightButton={
@@ -68,7 +68,7 @@ export default function Questionaire02Page() {
                             </svg>}
                         type="pink"
                         size="big_round"
-                        onClick={() => router.push("/onboard/signup/questionaire/questionaire03")}
+                        onClick={() => router.push("/onboard/signup/questionaire/questionaire04")}
                     />
                 }
             />

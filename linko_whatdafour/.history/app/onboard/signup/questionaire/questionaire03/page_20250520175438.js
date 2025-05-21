@@ -12,7 +12,7 @@ const GENDERS = [
   "Male", "Female", "Non-binary", "No preference"
 ];
 
-export default function Questionaire02Page() {
+export default function Questionaire01Page() {
     const router = useRouter();
     const [selected, setSelected] = useState([]);
 
