@@ -14,7 +14,7 @@
     background: url("/MatchedPage_background.png");
     background-size: cover;
     background-position: center;
-    padding: 0;
+    padding-top: 20px;
     margin: 0 auto;
     position: relative;
     font-family: "Lexend", "Rufly", sans-serif;

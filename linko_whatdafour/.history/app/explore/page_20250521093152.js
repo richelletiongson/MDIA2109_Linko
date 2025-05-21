@@ -54,6 +54,9 @@ export default function ExplorePage() {
     <div className={styles.page}>
      {/* Header */}
      <Header/>
+     {/*<div className={styles.header}>
+          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={120} height={30} className={styles.logo} />
+     </div>
      {/* Search Bar */}
      <div className={styles.searchBarWrapper}>
        <div className={styles.searchBarWithIcon}>
