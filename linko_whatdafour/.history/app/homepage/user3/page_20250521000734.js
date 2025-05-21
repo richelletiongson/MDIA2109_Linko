@@ -7,37 +7,36 @@ import { Container } from "@/app/.components/container/container.js";
 import NavigationBar from '@/app/.components/Navigation Bar/navigation.js';
 import { useRouter } from "next/navigation";
 import Header from '@/app/.components/Header/header';
+import { FaHeart } from "react-icons/fa";
 
 
-
-   
 
 export default function HomePage() {
-
-    const router = useRouter();
-    const [fadeOut, setFadeOut] = useState(false);
-    
+  const router = useRouter();
+  const [fadeOut, setFadeOut] = useState(false);
   // Placeholder user data
   const user = {
-    name: "Mike",
-    age: 23,
-    location: "North Vancouver, BC",
-    pronouns: "He/him",
+    name: "Bonnie",
+    age: 25,
+    location: "Burnaby, BC",
+    pronouns: "She/her",
     ethnicity: "English",
-    personality: "ISTJ",
-    quote: "I will go to see Drake in Tronoto, looking for friends!",
+    personality: "ENFP",
+    perference: "Night owl",
+    musictype: "DJ",
+    quote: "Where are the Swifies!",
   };
 
-  const users = 
-  [
-    { img: "/matchingusers/user1.png" }, // left
-    { img: "/matchingusers/user2.png" },  // center
-    { img: "/matchingusers/user3.png" },  // right
-  ];
+  const users =
+    [
+      { img: "/matchingusers/user2.png" }, // left
+      { img: "/matchingusers/user3.png" },  // center
+      { img: "/matchingusers/user4.png" },  // right
+    ];
 
   const handleDragEnd = () => {
     console.log("drag end!");
-    router.push("/homepage/user3");
+    router.push("/homepage/user2");
   };
 
 
@@ -71,40 +70,42 @@ export default function HomePage() {
             <Button buttonText={user.pronouns} type="light_purple" size="small_pill" />
             <Button buttonText={user.ethnicity} type="green" size="small_pill" />
             <Button buttonText={user.personality} type="light_purple" size="small_pill" />
+            <Button buttonText={user.perference} type="green" size="small_pill" />
+            <Button buttonText={user.musictype} type="light_purple" size="small_pill" />
           </div>
         </div>
 
+
         {/* Quote Section */}
         <div className={styles.quoteSection}>
-        <Container
-          text={`"${user.quote}"`}
-          color="darkPurple"
-          size="small"
-          border={true}
-          textStyle="Regular"
-        />
+          <Container
+            text={`"${user.quote}"`}
+            color="darkPurple"
+            size="small"
+            border={true}
+            textStyle="Regular"
+          />
         </div>
 
-        <div className={styles.actionButtons}>
 
+        {/* Like/Dislike Buttons */}
+        <div className={styles.actionButtons}>
           <Button
             buttonText={<Image src="/icons/dislike.png" alt="dislike" width={32} height={32} />}
             type="pink"
             size="big_round"
-            onClick={() => router.push('/homepage/user3')}
+            onClick={() => router.push('/homepage/user2')}
           />
           <Button
-             buttonText={<Image src="/icons/Heart.png" alt="dislike" width={32} height={32} />}
+            buttonText={<Image src="/icons/Heart.png" alt="like" width={32} height={32} />}
             type="pink"
             size="big_round"
-            onClick={() => router.push('/homepage/matched_mike')}
+            onClick={() => router.push('/homepage/matched')}
           />
         </div>
-
       </div>
       {/* Bottom Navigation */}
       <NavigationBar />
     </div>
   );
 }
-

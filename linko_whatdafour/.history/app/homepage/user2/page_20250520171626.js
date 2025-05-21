@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "@/app/.components/buttons";
 import styles from "../homepage.module.css";
+import { FaHeart, FaTimes, FaRegCommentDots, FaRegCompass, FaRegUser } from "react-icons/fa";
 import { Container } from "@/app/.components/container/container.js";
 import NavigationBar from '@/app/.components/Navigation Bar/navigation.js';
 import { useRouter } from "next/navigation";
