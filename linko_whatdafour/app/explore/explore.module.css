@@ -32,7 +32,7 @@
 .banner {
   display: flex;
   justify-content: center;
-  margin: 20px auto 0 auto;
+  margin: 5px auto 0 auto;
   padding: 0 16px;
   width: 100%;
   max-width: 370px;
