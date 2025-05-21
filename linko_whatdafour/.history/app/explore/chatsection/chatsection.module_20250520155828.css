@@ -1,0 +1,226 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #0f0e21;
+    color: #fff;
+}
+
+.page {
+    max-width: 402px;
+    height: 100vh;
+    background: #0f0e21;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 16px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7.5rem; /* space for nav bar */
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+/* Horizontal Avatar Scroll */
+.avatarScroll {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 24px 0 8px 16px;
+    margin-bottom: 8px;
+}
+
+.avatarWrapper {
+    min-width: 56px;
+    min-height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarImg {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Section Title Row */
+.sectionTitleRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px 0 20px;
+}
+
+.groupIcon {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Divider */
+.sectionDivider {
+    height: 2px;
+    background: #c2ff3e;
+    opacity: 0.5;
+    margin: 12px 20px 0 20px;
+    border-radius: 2px;
+}
+
+/* Search and Tabs Row */
+.searchTabsRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 20px 0 20px;
+    flex-wrap: nowrap;
+}
+
+.searchIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-left: 12px;
+}
+
+.tabBtn {
+    min-width: 100px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 24px;
+    padding: 8px 20px;
+}
+
+/* Chat List */
+.chatList {
+    margin: 18px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 20px;
+}
+
+.chatItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: none;
+    border-radius: 18px;
+    padding: 0;
+    gap: 16px;
+}
+
+.chatAvatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    background: #222;
+}
+
+.chatInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.chatNameRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatName {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatTime {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-left: 12px;
+    white-space: nowrap;
+}
+
+.chatMsgRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.chatMsg {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.unreadBadge {
+    background: #c2ff3e;
+    color: #222;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+}
+
+@media (max-width: 500px) {
+    .main {
+        padding-bottom: 5.5rem;
+    }
+    .chatMsg {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .searchTabsRow {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .tabs {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
