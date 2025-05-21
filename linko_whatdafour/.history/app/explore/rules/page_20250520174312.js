@@ -8,10 +8,36 @@ import { useRouter } from "next/navigation";
 
 export default function RulesPage() {
   const router = useRouter();
+
+  // Back button for header
+  const backButton = (
+    <Button
+      buttonText={
+        <svg
+          width='32'
+          height='32'
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
+          <path
+            d='M20 24L12 16L20 8'
+            stroke='#C2FF3E'
+            strokeWidth='3'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+          />
+        </svg>
+      }
+      onClick={() => router.back()}
+      type='transparent_greentxt'
+      size='small_round'
+    />
+  );
+
   return (
     <div className={styles.rulesBg}>
       <Header
-        leftButton={null}
+        leftButton={backButton}
       />
       <div className={styles.rulesContainerWrapper}>
         <Container color="black" size="rulesSize" border={true}>

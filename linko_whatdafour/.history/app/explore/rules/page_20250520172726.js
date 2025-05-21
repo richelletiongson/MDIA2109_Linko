@@ -60,7 +60,7 @@ export default function RulesPage() {
             </p>
           </div>
           <div className={styles.buttonRow}>
-            <Button buttonText="Next" type="pink" size="big_pill" onClick={() => router.push("/explore/chatsection")} />
+            <Button buttonText="Next" type="pink" size="big_pill" onClick={() => router.push("/explore/chat")} />
           </div>
         </Container>
       </div>
