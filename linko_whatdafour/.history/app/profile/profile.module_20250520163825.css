@@ -1,3 +1,6 @@
+/* Main container */
+
+
 .page {
   background: linear-gradient(180deg, #9B71F1 0%, #3F3A87 18.27%, #0F0E21 100%);
   color: #fff;
@@ -50,11 +53,13 @@
   margin-top: 2px;
 }
 
+/* Section */
 .section {
   padding: 0px 16px 10px 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
 }
 .sectionTitle {
   color: #fff;
@@ -62,8 +67,7 @@
   font-weight: 700;
   margin-bottom: 8px;
 }
-
-.tagsRow {
+/*.tagsRow {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -77,7 +81,7 @@
   font-weight: 600;
   background: #fff;
   color: #181633;
-}
+}*/
 
 .photosGrid1 {
   grid-template-columns: 1fr;
