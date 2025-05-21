@@ -54,18 +54,6 @@
     color: #0f0e21;
   }
 
-  .bottomModalOverlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background: rgba(150,0,0,1)
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 3000;
-  }
-
   .bottomStartedModalOverlay {
     position: fixed;
     left: 0;

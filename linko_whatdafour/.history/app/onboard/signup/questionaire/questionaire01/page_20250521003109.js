@@ -7,7 +7,7 @@ import styles from '../questionaire.module.css';
 import Button from '@/app/.components/buttons';
 import ProgressBar from '@/app/.components/progress bar/progress';
 import QuestionaireFooter from '@/app/.components/Questionaire Footer/footer';
-import { WarningMessage } from '@/app/.components/Modal/modal';
+import { GetStartedModal, WarningMessage } from '@/app/.components/Modal/modal';
 
 const LANGUAGES = [
   "English", "Mandarin Chinese", "Cantonese", "Japanese", "French",
@@ -83,14 +83,21 @@ export default function Questionaire01Page() {
                     />
                 }
             />
-            <WarningMessage
+            <GetStartedModal
                 isOpen={showError}
                 onClose={() => setShowError(false)}
-                message="Please write an answer to continue!"
-                type="error"
                 size="small"
-                className="bottomModalOverlay"
-            />
+                footer={
+                    <Button
+                        buttonText="Close"
+                        type="pink"
+                        size="smaller"
+                        onClick={() => setShowError(false)}
+                    />
+                }
+            >
+                <WarningMessage message="Please select at least one language to continue!" type="error" size="medium" />
+            </GetStartedModal>
         </div>
     );
 } 

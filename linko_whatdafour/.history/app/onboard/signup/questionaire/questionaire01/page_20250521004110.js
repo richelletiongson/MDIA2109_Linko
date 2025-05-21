@@ -83,14 +83,18 @@ export default function Questionaire01Page() {
                     />
                 }
             />
-            <WarningMessage
+            <ErrorModal
                 isOpen={showError}
                 onClose={() => setShowError(false)}
-                message="Please write an answer to continue!"
-                type="error"
                 size="small"
-                className="bottomModalOverlay"
-            />
+                footer={null}
+            >
+                <WarningMessage 
+                    message="Please select at least one language to continue!" 
+                    type="error" 
+                    size="small" 
+                />
+            </ErrorModal>
         </div>
     );
 } 

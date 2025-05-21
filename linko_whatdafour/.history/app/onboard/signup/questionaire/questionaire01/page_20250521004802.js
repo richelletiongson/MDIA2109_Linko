@@ -89,7 +89,6 @@ export default function Questionaire01Page() {
                 message="Please write an answer to continue!"
                 type="error"
                 size="small"
-                className="bottomModalOverlay"
             />
         </div>
     );

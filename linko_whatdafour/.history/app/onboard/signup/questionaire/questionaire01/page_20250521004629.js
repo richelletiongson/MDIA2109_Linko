@@ -8,11 +8,53 @@ import Button from '@/app/.components/buttons';
 import ProgressBar from '@/app/.components/progress bar/progress';
 import QuestionaireFooter from '@/app/.components/Questionaire Footer/footer';
 import { WarningMessage } from '@/app/.components/Modal/modal';
+import ReactDOM from 'react-dom';
 
 const LANGUAGES = [
   "English", "Mandarin Chinese", "Cantonese", "Japanese", "French",
   "German", "Spanish", "Korean", "Arabic", "Portuguese", "Russian"
 ];
+
+// BottomErrorModal: modal at bottom center, closes on overlay click
+function BottomErrorModal({ isOpen, onClose, children }) {
+    if (!isOpen) return null;
+    return ReactDOM.createPortal(
+        <div
+            style={{
+                position: 'fixed',
+                left: 0,
+                right: 0,
+                bottom: 0,
+                top: 0,
+                background: 'rgba(0,0,0,0.0)',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'flex-end',
+                zIndex: 3000,
+            }}
+            onClick={onClose}
+        >
+            <div
+                style={{
+                    background: '#fff',
+                    borderRadius: '24px 24px 0 0',
+                    width: '350px',
+                    maxWidth: '90vw',
+                    margin: '0 0 32px 0',
+                    boxShadow: '0 -4px 32px #0008',
+                    padding: '32px 20px 24px 20px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+                onClick={e => e.stopPropagation()}
+            >
+                {children}
+            </div>
+        </div>,
+        document.body
+    );
+}
 
 export default function Questionaire01Page() {
     const router = useRouter();
@@ -83,14 +125,13 @@ export default function Questionaire01Page() {
                     />
                 }
             />
-            <WarningMessage
-                isOpen={showError}
-                onClose={() => setShowError(false)}
-                message="Please write an answer to continue!"
-                type="error"
-                size="small"
-                className="bottomModalOverlay"
-            />
+            <BottomErrorModal isOpen={showError} onClose={() => setShowError(false)}>
+                <WarningMessage
+                    message="Please write an answer to continue!"
+                    type="error"
+                    size="small"
+                />
+            </BottomErrorModal>
         </div>
     );
 } 

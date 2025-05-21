@@ -12,8 +12,8 @@ import { FaHeart } from "react-icons/fa";
 
 
 export default function HomePage() {
-    const router = useRouter();
-    const [fadeOut, setFadeOut] = useState(false);
+  const router = useRouter();
+  const [fadeOut, setFadeOut] = useState(false);
   // Placeholder user data
   const user = {
     name: "Bonnie",
@@ -27,12 +27,12 @@ export default function HomePage() {
     quote: "Where are the Swifies!",
   };
 
-  const users = 
-  [
-    { img: "/matchingusers/user2.png" }, // left
-    { img: "/matchingusers/user3.png" },  // center
-    { img: "/matchingusers/user4.png" },  // right
-  ];
+  const users =
+    [
+      { img: "/matchingusers/user2.png" }, // left
+      { img: "/matchingusers/user3.png" },  // center
+      { img: "/matchingusers/user4.png" },  // right
+    ];
 
   const handleDragEnd = () => {
     console.log("drag end!");
@@ -78,13 +78,13 @@ export default function HomePage() {
 
         {/* Quote Section */}
         <div className={styles.quoteSection}>
-        <Container
-          text={`"${user.quote}"`}
-          color="darkPurple"
-          size="small"
-          border={true}
-          textStyle="Regular"
-        />
+          <Container
+            text={`"${user.quote}"`}
+            color="darkPurple"
+            size="small"
+            border={true}
+            textStyle="Regular"
+          />
         </div>
 
 

@@ -8,7 +8,7 @@ export const WarningMessage = ({
     onClose = null,
     message = "Please write an answer to continue !",
     type = "error",
-    size = "small",
+    size = "medium",
     children,
 }) => {
     if (!isOpen) return null;
