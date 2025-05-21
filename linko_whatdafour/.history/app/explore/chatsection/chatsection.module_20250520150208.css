@@ -1,0 +1,31 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page {
+    max-width: 402px;
+    height: 100vh;
+    background: #0f0e21;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 16px;
+}
+
+.main {
+    flex: 1;
+    padding: 2rem;
+    padding-bottom: 5rem; /* Add space for the navigation bar */
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+}
