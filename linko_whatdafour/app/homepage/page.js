@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../.components/buttons";
 import styles from "./homepage.module.css";
-import { FaHeart, FaTimes, FaRegCommentDots, FaRegCompass, FaRegUser } from "react-icons/fa";
 import { Container } from "../.components/container/container.js";
 import NavigationBar from "../.components/Navigation Bar/navigation";
 import { useRouter } from "next/navigation";
+import Header from '@/app/.components/Header/header';
 
 
 export default function HomePage() {
@@ -39,10 +39,8 @@ export default function HomePage() {
   return (
     <div className={styles.container}>
       <div className={styles.page}>
-        {/* Header */}
-        <div className={styles.header}>
-          <Image src="/logos/linko_primarylogo.svg" alt="Linko logo" width={268} height={268} className={styles.logo} />
-        </div>
+         {/* Header */}
+         <Header />
         {/* Profile Images Row */}
         <div className={styles.profileImageSection}>
           <div className={styles.profileImagesRow}>
@@ -82,22 +80,23 @@ export default function HomePage() {
         />
         </div>
 
-
-        {/* Like/Dislike Buttons */}
         <div className={styles.actionButtons}>
+
           <Button
-            buttonText={<FaTimes size={32} />}
+            buttonText={<Image src="/icons/dislike.png" alt="dislike" width={32} height={32} />}
             type="pink"
             size="big_round"
-            onClick={() => router.push("/homepage/user2")}
+            onClick={() => router.push('/homepage/user2')}
           />
           <Button
-            buttonText={<FaHeart size={32} />}
+             buttonText={<Image src="/icons/Heart.png" alt="dislike" width={32} height={32} />}
             type="pink"
             size="big_round"
-
+            onClick={() => router.push('/homepage/matched_danny')}
           />
         </div>
+
+
       </div>
       {/* Bottom Navigation */}
       <NavigationBar />
