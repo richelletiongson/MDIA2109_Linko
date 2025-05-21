@@ -4,21 +4,22 @@ import styles from "./modal.module.css";
 import Button from "../buttons";
 
 export const WarningMessage = ({
-    isOpen = false,
-    onClose = null,
     message = "Please write an answer to continue !",
     type = "error",
-    size = "small",
-    children,
+    size = "medium",
 }) => {
-    if (!isOpen) return null;
+    const messageClasses = classnames(styles.warningBox, {
+        [styles.error]: type === "error",
+        [styles.warning]: type === "warning",
+        [styles.success]: type === "success",
+        [styles.small]: size === "small",
+        [styles.medium]: size === "medium",
+        [styles.large]: size === "large",
+    });
+
     return (
-        <div className={styles.bottomModalOverlay} onClick={onClose}>
-            <div className={styles.bottomModalBox} onClick={e => e.stopPropagation()}>
-                <div className={classnames(styles.warningBox, styles[type], styles[size])}>
-                    <span className={styles.text}>{message || children}</span>
-                </div>
-            </div>
+        <div className={messageClasses}>
+            <span className={styles.text}>{message}</span>
         </div>
     );
 };
@@ -39,14 +40,8 @@ export const GetStartedModal = ({
     });
 
     return (
-        <div
-            className={styles.overlay}
-            onClick={onClose}
-        >
-            <div
-                className={modalClasses}
-                onClick={e => e.stopPropagation()}
-            >
+        <div className={styles.overlay}>
+            <div className={modalClasses}>
                 <div className={styles.topBar}></div>
                 <div className={styles.content}>{children}</div>
                 <div className={styles.footer}>{footer}</div>
