@@ -1,0 +1,38 @@
+.page {
+    max-width: 402px;
+    height: 100vh;
+    background-image: url('/photos/questionaire_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+      }
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 0;
+    margin: 20px;
+}
+
+.loading {
+    width: 500px;
+    height: auto;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+
+
+
