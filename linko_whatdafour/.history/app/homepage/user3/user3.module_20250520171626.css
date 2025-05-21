@@ -30,7 +30,7 @@
   .page {
       background: url('/MatchingPage_background.png');
       color: #fff;
-      min-height: 100vh;
+      min-height: 600px;
       width: 402px; 
       display: flex;
       flex-direction: column;

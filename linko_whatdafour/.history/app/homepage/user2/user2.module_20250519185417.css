@@ -14,7 +14,6 @@
     font-size: 32px;
     text-align: left;
   }
-
   .userName{
   margin-left: 30px;
   }
@@ -30,11 +29,12 @@
   .page {
       background: url('/MatchingPage_background.png');
       color: #fff;
-      min-height: 100vh;
+      min-height: 600px;
       width: 402px; 
       display: flex;
       flex-direction: column;
       position: relative;
+      padding-top: 45px;
       padding-bottom: 80px; /* for bottom nav */
       overflow-x: hidden;
       overflow-y: hidden;
@@ -43,8 +43,19 @@
       
   }
     
+    .header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .logo {
+      height: 40px;
+      margin: 0 auto;
+    }
+  
     .Container {
-       margin-left: 30px;
+  margin-left: 30px;
     }
   
   .profileImagesRow {
@@ -100,19 +111,8 @@
     justify-content: flex-start;
     align-items: left;
     gap: 10px;
-    margin: 10px 10px 10px 30px;
+    margin: 10px 0 30px 30px;
   
   }
   
-  .page {
-    transition: opacity 0.4s;
-    opacity: 1;
-  }
   
-  .page.fadeOut {
-    opacity: 0;
-  }
-
-  .header {
-    padding: 12px 12px 0 12px;
-  }
