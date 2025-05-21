@@ -83,41 +83,41 @@ export default function SignupPage() {
       <form className={styles.form}>
         <label className={styles.label}>What's your preferred username?</label>
         <InputField
-          placeholder = ""
-          size = "large"
-          color = "purple2"
+          placeholder=""
+          size="large"
+          color="purple2"
         />
 
         <label className={styles.label}>When is your birthday?</label>
         <InputField
-          placeholder = "(MM/DD/YYYY)"
-          size = "large"
-          color = "purple2"
+          placeholder="(MM/DD/YYYY)"
+          size="large"
+          color="purple2"
         />
 
         <label className={styles.label}>What are your pronouns?</label>
         <InputField
-          placeholder = "(e.g., he/him, she/her, other)"
-          size = "large"
-          color = "purple2"
+          placeholder="(e.g., he/him, she/her, other)"
+          size="large"
+          color="purple2"
         />
 
         <label className={styles.label}>Which province do you live in?</label>
         <InputField
-          placeholder = ""
-          size = "large"
-          color = "purple2"
+          placeholder=""
+          size="large"
+          color="purple2"
         />
       </form>
 
       <div className={styles.signup_Button}>
         <Button
-          buttonText="Next" 
-          type="pink" 
-          size="small" 
+          buttonText="Next"
+          type="pink"
+          size="small"
           onClick={() => router.push("/onboard/signup/questionaire/questionaire01")}
         />
-        </div>
+      </div>
     </div>
   );
 } 

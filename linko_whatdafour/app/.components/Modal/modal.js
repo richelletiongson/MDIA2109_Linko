@@ -129,18 +129,18 @@ export function PhotoGalleryModal({ isOpen, onClose, onDone, availablePhotos, se
                     ))}
                 </div>
                 <div className={styles.photoGalleryFooter}>
-                <Button
-                            buttonText="Cancel"
-                            onClick={onClose}
-                            type="pink"
-                            size="smaller"
-                        />
-                <Button
-                            buttonText="Done"
-                            onClick={onDone}
-                            type="pink"
-                            size="smaller"
-                        />
+                    <Button
+                        buttonText="Cancel"
+                        onClick={onClose}
+                        type="pink"
+                        size="smaller"
+                    />
+                    <Button
+                        buttonText="Done"
+                        onClick={onDone}
+                        type="pink"
+                        size="smaller"
+                    />
                 </div>
             </div>
         </div>
