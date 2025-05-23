@@ -58,11 +58,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  margin-top: 0;
+  margin-top: 48px;
   z-index: 200;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 300px;
 }
 
 .logoContainer {
@@ -76,38 +75,23 @@
 }
 
 .logomark {
-  position: absolute;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
 .primaryLogo {
-  position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   width: 300px;
   height: auto;
 }
 
-.centeredLogomark {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
-  pointer-events: none;
-}
-
 .fadeOut {
-  opacity: 0 !important;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .fadeIn {
-  opacity: 1 !important;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 
 

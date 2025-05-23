@@ -36,8 +36,8 @@ export default function OnboardPage() {
         <Image
           src="/logos/linko_logomark.svg"
           alt="Linko logomark"
-          width={800}
-          height={800}
+          width={268}
+          height={268}
           priority
         />
       </div>

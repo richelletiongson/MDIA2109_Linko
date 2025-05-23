@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import styles from "./landingpage.module.css";
 import { useRouter } from 'next/navigation';
@@ -7,16 +7,34 @@ import Button from "@/app/.components/buttons";
 
 export default function InitialPage() {
   const router = useRouter();
+  const [showPrimaryLogo, setShowPrimaryLogo] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPrimaryLogo(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div className={styles.centeredLogomark}>
+        <div className={styles.logoContainer}>
           <Image
+            className={`${styles.logomark} ${showPrimaryLogo ? styles.fadeOut : ''}`}
             src="/logos/linko_logomark.svg"
             alt="Linko logomark"
-            width={800}
-            height={800}
+            width={300}
+            height={300}
+            priority
+          />
+          <Image
+            className={`${styles.primaryLogo} ${showPrimaryLogo ? styles.fadeIn : ''}`}
+            src="/logos/linko_primarylogo.svg"
+            alt="Linko primary logo"
+            width={300}
+            height={300}
             priority
           />
         </div>

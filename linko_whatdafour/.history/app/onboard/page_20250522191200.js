@@ -36,15 +36,16 @@ export default function OnboardPage() {
         <Image
           src="/logos/linko_logomark.svg"
           alt="Linko logomark"
-          width={800}
-          height={800}
+          width={268}
+          height={268}
           priority
         />
       </div>
       <div className={styles.content}>
-        <div className={styles.logoContainer}>
+        <div className={`${styles.logoContainer} ${showPrimaryLogo ? styles.fadeIn : ''}`}
+             style={{ opacity: showPrimaryLogo ? 1 : 0 }}>
           <Image
-            className={`${styles.primaryLogo} ${showPrimaryLogo ? styles.fadeIn : ''}`}
+            className={styles.primaryLogo}
             src="/logos/linko_primarylogo.svg"
             alt="Linko primary logo"
             width={300}

@@ -29,50 +29,46 @@ export default function OnboardPage() {
         Your browser does not support the video tag.
       </video>
       <div className={styles.overlay} />
-      <div
-        className={`${styles.centeredLogomark} ${showPrimaryLogo ? styles.fadeOut : ''}`}
-        style={{ pointerEvents: 'none' }}
-      >
-        <Image
-          src="/logos/linko_logomark.svg"
-          alt="Linko logomark"
-          width={800}
-          height={800}
-          priority
-        />
-      </div>
       <div className={styles.content}>
-        <div className={styles.logoContainer}>
+      <div className={styles.logoContainer}>
+          <Image
+            className={`${styles.logomark} ${showPrimaryLogo ? styles.fadeOut : ''}`}
+            src="/logos/linko_logomark.svg"
+            alt="Linko logomark"
+            width={800}
+            height={800}
+            priority
+          />
           <Image
             className={`${styles.primaryLogo} ${showPrimaryLogo ? styles.fadeIn : ''}`}
             src="/logos/linko_primarylogo.svg"
             alt="Linko primary logo"
-            width={300}
+            width={320}
             height={100}
             priority
           />
         </div>
+        </div>
         <div className={styles.buttonGroup}>
-          <Button
-            buttonText="Log in with Google"
-            type="white"
-            size="big"
-            onClick={() => router.push("/onboard/signup")}
-          />
-          <Button
-            buttonText="Log in"
-            type="white"
-            size="big"
-            onClick={() => router.push("/onboard/signup")}
-          />
-          <Button
-            buttonText="Sign Up"
-            type="white"
-            size="big"
-            onClick={() => router.push("/onboard/signup")}
-          />
+            <Button
+                buttonText="Log in with Google"
+                type="white"
+                size="big"
+                onClick={() => router.push("/onboard/signup")}
+            />
+            <Button
+                buttonText="Log in"
+                type="white"
+                size="big"
+                onClick={() => router.push("/onboard/signup")}
+            />
+            <Button
+                buttonText="Sign Up"
+                type="white"
+                size="big"
+                onClick={() => router.push("/onboard/signup")}
+            />
         </div>
       </div>
-    </div>
   );
 }

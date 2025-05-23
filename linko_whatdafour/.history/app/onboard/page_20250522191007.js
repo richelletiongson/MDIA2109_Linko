@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Button from "@/app/.components/buttons";
 import { useRouter } from 'next/navigation';
@@ -7,14 +7,6 @@ import styles from './onboard.module.css';
 
 export default function OnboardPage() {
   const router = useRouter();
-  const [showPrimaryLogo, setShowPrimaryLogo] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPrimaryLogo(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className={styles.page}>
@@ -29,26 +21,14 @@ export default function OnboardPage() {
         Your browser does not support the video tag.
       </video>
       <div className={styles.overlay} />
-      <div
-        className={`${styles.centeredLogomark} ${showPrimaryLogo ? styles.fadeOut : ''}`}
-        style={{ pointerEvents: 'none' }}
-      >
-        <Image
-          src="/logos/linko_logomark.svg"
-          alt="Linko logomark"
-          width={800}
-          height={800}
-          priority
-        />
-      </div>
       <div className={styles.content}>
         <div className={styles.logoContainer}>
           <Image
-            className={`${styles.primaryLogo} ${showPrimaryLogo ? styles.fadeIn : ''}`}
-            src="/logos/linko_primarylogo.svg"
-            alt="Linko primary logo"
-            width={300}
-            height={100}
+            className={styles.logomark}
+            src="/logos/linko_logomark.svg"
+            alt="Linko logomark"
+            width={268}
+            height={268}
             priority
           />
         </div>
