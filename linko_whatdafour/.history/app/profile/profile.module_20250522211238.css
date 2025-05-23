@@ -149,15 +149,13 @@
   height: 80px;
   object-fit: cover;
   border-radius: 20px;
-  z-index: 1;
-  position: relative;
 }
 .removePhotoBtn {
   position: absolute;
   top: -4px;
   right: -10px;
   display: flex;
-  z-index: 10;
+  z-index: 2;
   background: #FE4366;
 }
 
