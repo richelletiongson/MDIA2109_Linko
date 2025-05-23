@@ -96,6 +96,7 @@ export default function ExplorePage() {
                 type="pink"
                 size="small_pill"
                 onClick={() => {
+                  console.log("Join button clicked");
                   router.push("/explore/rules");
                 }}
               />
