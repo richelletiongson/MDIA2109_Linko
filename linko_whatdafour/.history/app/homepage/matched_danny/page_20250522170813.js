@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import Button from "@/app/.components/buttons";
 import { SuccessMessage } from "@/app/.components/Modal/modal";
 import InputField from "@/app/.components/input_field/input_field.js";

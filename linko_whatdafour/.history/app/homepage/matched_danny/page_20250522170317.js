@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import Button from "@/app/.components/buttons";
-import { SuccessMessage } from "@/app/.components/Modal/modal";
 import InputField from "@/app/.components/input_field/input_field.js";
 import styles from "./matched_danny.module.css";
 import Header from '@/app/.components/Header/header';
@@ -11,12 +10,6 @@ import { useRouter } from "next/navigation";
 
 export default function MatchPage() {
   const router = useRouter();
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const handleSentButtonClick = () => {
-    setShowSuccess(true);
-  };
-
   return (
     <div className={styles.container}>
       {/* Header */}
@@ -77,23 +70,12 @@ export default function MatchPage() {
                 }
                 type="transparent_whitetxt"
                 size="big_round"
-                onClick={handleSentButtonClick}
+                onClick={() => {}}
               />
             }
           />
         </div>
       </div>
-      <SuccessMessage
-        isOpen={showSuccess}
-        onClose={() => {
-          setShowSuccess(false);
-          router.push("/homepage/user2");
-        }}
-        message="Message sent!"
-        type="success"
-        size="small"
-        className="bottomModalOverlay"
-      />
     </div>
   );
 }
