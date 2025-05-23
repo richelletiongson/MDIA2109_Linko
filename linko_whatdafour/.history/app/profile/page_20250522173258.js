@@ -406,13 +406,12 @@ export default function ProfilePage() {
      setSelectedPhotos={setSelectedPhotos}
    />
       <Button 
-        className={styles.editPhotoButton}
-        buttonText="Edit" 
-        type="dark_purple" 
-        size="long" 
-        border="green_border" 
-        onClick={handleOpenPhotoModal} 
-      />
+          buttonText="Edit" 
+          type="dark_purple" 
+          size="long" 
+          border="green_border" 
+          onClick={handleOpenPhotoModal} 
+        />
     </section>
 
     {/* Genres Section */}
