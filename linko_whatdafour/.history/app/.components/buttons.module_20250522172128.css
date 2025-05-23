@@ -74,7 +74,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .big_round {
@@ -87,7 +86,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .big {
@@ -98,7 +96,6 @@
   width: 325px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .medium {
@@ -110,7 +107,6 @@
   max-width: 200px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .small {
@@ -123,7 +119,6 @@
   max-width: 200px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .smaller {
@@ -136,7 +131,6 @@
   max-width: 100px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .big_pill {
@@ -153,7 +147,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .small_pill {
@@ -169,7 +162,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .long {
@@ -184,13 +176,11 @@
   height: 35px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .button.dark_purple.long.green_border:hover {
   background: #C2FF3E;
   color: #0F0E21;
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .button.nav {
@@ -208,13 +198,11 @@
   font-weight: 400;
   box-shadow: none;
   outline: none;
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .button.nav_active {
   color: #BCA6F7;
   font-weight: 500;
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 .button.nav .icon,
@@ -225,7 +213,6 @@
   font-size: 2rem;
   color: inherit;
   transition: color 0.2s;
-  font-family: 'Lexend', 'Inter', Arial, sans-serif;
 }
 
 
